@@ -1,0 +1,542 @@
+import { Topic } from '../types';
+import img1 from '../assets/images/topic1_furniture_1788358820181.jpg';
+import img2 from '../assets/images/topic2_clothes_1788358835429.jpg';
+import img3 from '../assets/images/topic3_car_1788358851097.jpg';
+import img4 from '../assets/images/topic4_hiking_1788358865080.jpg';
+import img5 from '../assets/images/topic5_family_1788358882183.jpg';
+import img6 from '../assets/images/topic6_train_1788358898226.jpg';
+import img7 from '../assets/images/topic7_blue_dress_1788358912340.jpg';
+import img8 from '../assets/images/topic8_essen_trinken_1788359070095.jpg';
+import img9 from '../assets/images/topic9_einkaufen_1788359089142.jpg';
+import img10 from '../assets/images/topic10_freizeit_1788359109414.jpg';
+import img11 from '../assets/images/topic11_wohnen_1788359128180.jpg';
+import img12 from '../assets/images/topic12_arbeit_1788359145759.jpg';
+
+export const sprechenTopics: Topic[] = [
+  {
+    id: '8',
+    title: 'Essen und Trinken — Food and Drinks',
+    icon: 'Coffee',
+    image: img8,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich einen Tisch.', en: 'In the picture I see a table.' },
+      { de: 'Ich sehe Frühstück und Kaffee.', en: 'I see breakfast and coffee.' },
+      { de: 'Ich sehe auch Wasser und Obst.', en: 'I also see water and fruit.' },
+      { de: 'Das Essen sieht sehr lecker aus.', en: 'The food looks very delicious.' },
+      { de: 'Ein Mann sitzt am Tisch. Er trägt ein blaues Hemd.', en: 'A man is sitting at the table. He is wearing a blue shirt.' }
+    ],
+    situation: [
+      { de: 'Wann isst du Frühstück?', en: 'When do you eat breakfast?' },
+      { de: '→ Ich esse um sieben Uhr Frühstück.', en: '→ I eat breakfast at seven o\'clock.', isAnswer: true },
+      { de: 'Was ist dein Lieblingsessen?', en: 'What is your favorite food?' },
+      { de: '→ Mein Lieblingsessen ist Biryani.', en: '→ My favorite food is Biryani.', isAnswer: true },
+      { de: 'Wie oft gehst du ins Restaurant?', en: 'How often do you go to a restaurant?' },
+      { de: '→ Einmal pro Woche.', en: '→ Once a week.', isAnswer: true },
+      { de: 'Trinkst du viel Wasser?', en: 'Do you drink a lot of water?' },
+      { de: '→ Ja, ich trinke zwei Liter Wasser am Tag.', en: '→ Yes, I drink two liters of water a day.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'das Hemd', en: 'shirt' },
+      { de: 'blau', en: 'blue' },
+      { de: 'das Frühstück', en: 'breakfast' },
+      { de: 'das Lieblingsessen', en: 'favorite food' },
+      { de: 'das Restaurant', en: 'restaurant' },
+      { de: 'das Wasser', en: 'water' },
+      { de: 'das Obst', en: 'fruit' },
+      { de: 'der Kaffee', en: 'coffee' },
+      { de: 'das Abendessen', en: 'dinner' }
+    ]
+  },
+  {
+    id: '9',
+    title: 'Einkaufen — Shopping',
+    icon: 'ShoppingCart',
+    image: img9,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich einen Supermarkt.', en: 'In the picture I see a supermarket.' },
+      { de: 'Ich sehe eine Person an der Kasse.', en: 'I see a person at the checkout.' },
+      { de: 'Die Person kauft Obst und Schuhe.', en: 'The person is buying fruit and shoes.' },
+      { de: 'Die Person bezahlt mit Geld.', en: 'The person is paying with money.' },
+      { de: 'Die Person trägt einen roten Pullover und eine blaue Jeans.', en: 'The person is wearing a red sweater and blue jeans.' }
+    ],
+    situation: [
+      { de: 'Wo kaufst du Obst?', en: 'Where do you buy fruit?' },
+      { de: '→ Ich kaufe Obst auf dem Markt.', en: '→ I buy fruit at the market.', isAnswer: true },
+      { de: 'Wann gehst du in den Supermarkt?', en: 'When do you go to the supermarket?' },
+      { de: '→ Am Samstag.', en: '→ On Saturday.', isAnswer: true },
+      { de: 'Wie viel kosten die Schuhe?', en: 'How much do the shoes cost?' },
+      { de: '→ Die Schuhe kosten 40 Euro.', en: '→ The shoes cost 40 euros.', isAnswer: true },
+      { de: 'Bezahlst du an der Kasse mit Karte?', en: 'Do you pay by card at the checkout?' },
+      { de: '→ Nein, ich bezahle bar.', en: '→ No, I pay in cash.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'der Pullover', en: 'sweater' },
+      { de: 'die Jeans', en: 'jeans' },
+      { de: 'rot', en: 'red' },
+      { de: 'der Supermarkt', en: 'supermarket' },
+      { de: 'die Kasse', en: 'checkout' },
+      { de: 'das Obst', en: 'fruit' },
+      { de: 'die Schuhe', en: 'shoes' },
+      { de: 'das Geld', en: 'money' },
+      { de: 'der Markt', en: 'market' },
+      { de: 'teuer', en: 'expensive' }
+    ]
+  },
+  {
+    id: '10',
+    title: 'Freizeit — Free Time',
+    icon: 'Gamepad2',
+    image: img10,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich Freunde am Wochenende.', en: 'In the picture I see friends on the weekend.' },
+      { de: 'Eine Person liest ein Buch.', en: 'One person is reading a book.' },
+      { de: 'Im Hintergrund spielen Leute Fußball.', en: 'In the background people are playing football.' },
+      { de: 'Sie hören Musik und haben Spaß.', en: 'They are listening to music and having fun.' },
+      { de: 'Ein Freund trägt ein gelbes T-Shirt und eine schwarze Hose.', en: 'One friend is wearing a yellow T-shirt and black trousers.' }
+    ],
+    situation: [
+      { de: 'Was machst du am Wochenende?', en: 'What do you do on the weekend?' },
+      { de: '→ Ich treffe meine Freunde.', en: '→ I meet my friends.', isAnswer: true },
+      { de: 'Machst du Sport?', en: 'Do you do sports?' },
+      { de: '→ Ja, ich spiele Fußball.', en: '→ Yes, I play football.', isAnswer: true },
+      { de: 'Wie oft gehst du ins Kino?', en: 'How often do you go to the cinema?' },
+      { de: '→ Nur einmal im Monat.', en: '→ Only once a month.', isAnswer: true },
+      { de: 'Welche Musik hörst du gern?', en: 'What music do you like listening to?' },
+      { de: '→ Ich höre gern indische Musik.', en: '→ I like listening to Indian music.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'gelb', en: 'yellow' },
+      { de: 'die Hose', en: 'trousers' },
+      { de: 'schwarz', en: 'black' },
+      { de: 'das Wochenende', en: 'weekend' },
+      { de: 'der Sport', en: 'sport' },
+      { de: 'das Kino', en: 'cinema' },
+      { de: 'das Fernsehen', en: 'television' },
+      { de: 'die Musik', en: 'music' },
+      { de: 'das Buch', en: 'book' },
+      { de: 'der Urlaub', en: 'vacation' }
+    ]
+  },
+  {
+    id: '5',
+    title: 'Familie & Urlaub — Family & Vacation',
+    icon: 'Plane',
+    image: img5,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich eine Familie.', en: 'In the picture I see a family.' },
+      { de: 'Ich sehe einen Vater, eine Mutter und drei Kinder.', en: 'I see a father, a mother and three children.' },
+      { de: 'Die Familie ist glücklich.', en: 'The family is happy.' },
+      { de: 'Sie machen eine Reise.', en: 'They are going on a trip.' },
+      { de: 'Der Junge hat einen Koffer.', en: 'The boy has a suitcase.' },
+      { de: 'Ich glaube, sie fahren in den Urlaub.', en: 'I think they are going on vacation.' },
+      { de: 'Der Vater trägt ein grünes Hemd und die Mutter trägt eine weiße Bluse.', en: 'The father is wearing a green shirt and the mother is wearing a white blouse.' }
+    ],
+    situation: [
+      { de: 'Wir möchten zusammen Urlaub machen.', en: 'We want to go on vacation together.' },
+      { de: 'Wohin reisen wir?', en: 'Where are we travelling?' },
+      { de: '→ Wir reisen nach Deutschland.', en: '→ We are travelling to Germany.', isAnswer: true },
+      { de: 'Wie reisen wir?', en: 'How are we travelling?' },
+      { de: '→ Wir reisen mit dem Flugzeug.', en: '→ We are travelling by plane.', isAnswer: true },
+      { de: 'Wer kommt mit?', en: 'Who is coming?' },
+      { de: '→ Meine Schwester und meine Mutter kommen mit.', en: '→ My sister and my mother are coming.', isAnswer: true },
+      { de: 'Was nehmen wir mit?', en: 'What do we take with us?' },
+      { de: '→ Wir nehmen Koffer und Taschen mit.', en: '→ We take suitcases and bags.', isAnswer: true },
+      { de: 'Was brauchen die Kinder?', en: 'What do the children need?' },
+      { de: '→ Die Kinder brauchen Kleidung und Wasser.', en: '→ The children need clothes and water.', isAnswer: true },
+      { de: 'Was machen wir im Urlaub?', en: 'What do we do on vacation?' },
+      { de: '→ Wir schwimmen, essen und spazieren.', en: '→ We swim, eat and walk.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'grün', en: 'green' },
+      { de: 'die Bluse', en: 'blouse' },
+      { de: 'weiß', en: 'white' },
+      { de: 'der Vater', en: 'father' },
+      { de: 'die Mutter', en: 'mother' },
+      { de: 'der Sohn', en: 'son' },
+      { de: 'die Tochter', en: 'daughter' },
+      { de: 'das Kind', en: 'child' },
+      { de: 'der Koffer', en: 'suitcase' },
+      { de: 'die Tasche', en: 'bag' },
+      { de: 'der Urlaub', en: 'vacation' },
+      { de: 'die Reise', en: 'trip' },
+      { de: 'reisen', en: 'to travel' },
+      { de: 'fliegen', en: 'to fly' },
+      { de: 'schwimmen', en: 'to swim' },
+      { de: 'spazieren', en: 'to walk' }
+    ]
+  },
+  {
+    id: '6',
+    title: 'Bahnhof & Reise — Train Station & Travel',
+    icon: 'Train',
+    image: img6,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich eine Mutter und zwei Kinder.', en: 'In the picture I see a mother and two children.' },
+      { de: 'Sie sind am Bahnhof.', en: 'They are at the train station.' },
+      { de: 'Sie stehen auf dem Bahnsteig.', en: 'They are standing on the platform.' },
+      { de: 'Ich sehe einen Zug.', en: 'I see a train.' },
+      { de: 'Sie möchten mit dem Zug fahren.', en: 'They want to travel by train.' },
+      { de: 'Die Mutter hat eine blaue Tasche.', en: 'The mother has a blue bag.' },
+      { de: 'Die Mutter trägt einen grauen Mantel und einen schwarzen Schal.', en: 'The mother is wearing a grey coat and a black scarf.' }
+    ],
+    situation: [
+      { de: 'Wir möchten zusammen reisen.', en: 'We want to travel together.' },
+      { de: 'Wohin reisen wir?', en: 'Where are we travelling?' },
+      { de: '→ Wir reisen nach Deutschland.', en: '→ We are travelling to Germany.', isAnswer: true },
+      { de: 'Wie reisen wir?', en: 'How are we travelling?' },
+      { de: '→ Wir fahren mit dem Zug.', en: '→ We are travelling by train.', isAnswer: true },
+      { de: 'Wann fahren wir?', en: 'When do we leave?' },
+      { de: '→ Wir fahren am Samstag.', en: '→ We leave on Saturday.', isAnswer: true },
+      { de: 'Wer kommt noch mit?', en: 'Who else is coming?' },
+      { de: '→ Meine Schwester und meine Mutter kommen mit.', en: '→ My sister and my mother are coming.', isAnswer: true },
+      { de: 'Was nehmen wir mit?', en: 'What do we take with us?' },
+      { de: '→ Wir nehmen zwei Koffer mit.', en: '→ We take two suitcases.', isAnswer: true },
+      { de: 'Was brauchen wir?', en: 'What do we need?' },
+      { de: '→ Wir brauchen Tickets und einen Koffer.', en: '→ We need tickets and a suitcase.', isAnswer: true },
+      { de: 'Was machen wir am Bahnhof?', en: 'What do we do at the train station?' },
+      { de: '→ Wir warten auf den Zug.', en: '→ We wait for the train.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'grau', en: 'grey' },
+      { de: 'der Mantel', en: 'coat' },
+      { de: 'der Schal', en: 'scarf' },
+      { de: 'schwarz', en: 'black' },
+      { de: 'der Bahnhof', en: 'train station' },
+      { de: 'der Zug', en: 'train' },
+      { de: 'der Bahnsteig', en: 'platform' },
+      { de: 'das Ticket', en: 'ticket' },
+      { de: 'der Koffer', en: 'suitcase' },
+      { de: 'die Tasche', en: 'bag' },
+      { de: 'warten', en: 'to wait' },
+      { de: 'fahren', en: 'to travel/drive' },
+      { de: 'ankommen', en: 'to arrive' },
+      { de: 'abfahren', en: 'to leave/depart' }
+    ]
+  },
+  {
+    id: '2',
+    title: 'Kleidergeschäft — Clothing Store',
+    icon: 'Shirt',
+    image: img2,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich zwei Personen.', en: 'In the picture I see two people.' },
+      { de: 'Ich sehe einen Mann und eine Frau.', en: 'I see a man and a woman.' },
+      { de: 'Sie sind in einem Kleidergeschäft.', en: 'They are in a clothing store.' },
+      { de: 'Die Frau hält eine Jacke.', en: 'The woman is holding a jacket.' },
+      { de: 'Ich sehe auch eine Bluse, eine Hose und ein T-Shirt.', en: 'I also see a blouse, trousers and a T-shirt.' },
+      { de: 'Ich glaube, sie möchten Kleidung kaufen.', en: 'I think they want to buy clothes.' },
+      { de: 'Die Frau sucht eine Jacke.', en: 'The woman is looking for a jacket.' },
+      { de: 'Der Mann trägt eine schwarze Jacke und die Frau trägt einen weißen Pullover.', en: 'The man is wearing a black jacket and the woman is wearing a white sweater.' }
+    ],
+    situation: [
+      { de: 'Wir möchten zusammen Kleidung kaufen.', en: 'We want to buy clothes together.' },
+      { de: 'Wo kaufen wir Kleidung?', en: 'Where do we buy clothes?' },
+      { de: '→ Wir kaufen Kleidung im Geschäft.', en: '→ We buy clothes in the shop.', isAnswer: true },
+      { de: 'Was möchtest du kaufen?', en: 'What do you want to buy?' },
+      { de: '→ Ich möchte eine Jacke kaufen.', en: '→ I want to buy a jacket.', isAnswer: true },
+      { de: 'Welche Größe hast du?', en: 'What size are you?' },
+      { de: '→ Ich habe Größe M.', en: '→ I am size M.', isAnswer: true },
+      { de: 'Welche Farbe möchtest du?', en: 'What color do you want?' },
+      { de: '→ Ich möchte eine schwarze Jacke.', en: '→ I want a black jacket.', isAnswer: true },
+      { de: 'Wie viel kostet die Jacke?', en: 'How much does the jacket cost?' },
+      { de: '→ Die Jacke kostet 40 Euro.', en: '→ The jacket costs 40 euros.', isAnswer: true },
+      { de: 'Wie bezahlen wir?', en: 'How do we pay?' },
+      { de: '→ Wir bezahlen mit Karte.', en: '→ We pay by card.', isAnswer: true },
+      { de: 'Gefällt dir die Jacke?', en: 'Do you like the jacket?' },
+      { de: '→ Ja, die Jacke gefällt mir sehr gut.', en: '→ Yes, I like the jacket very much.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'der Pullover', en: 'sweater' },
+      { de: 'die Jacke', en: 'jacket' },
+      { de: 'die Bluse', en: 'blouse' },
+      { de: 'das Hemd', en: 'shirt' },
+      { de: 'die Hose', en: 'trousers' },
+      { de: 'das T-Shirt', en: 'T-shirt' },
+      { de: 'das Kleid', en: 'dress' },
+      { de: 'der Mantel', en: 'coat' },
+      { de: 'die Schuhe', en: 'shoes' },
+      { de: 'die Größe', en: 'size' },
+      { de: 'die Farbe', en: 'color' },
+      { de: 'tragen', en: 'to wear' },
+      { de: 'kaufen', en: 'to buy' },
+      { de: 'kosten', en: 'to cost' },
+      { de: 'bezahlen', en: 'to pay' },
+      { de: 'passen', en: 'to fit' },
+      { de: 'schwarz', en: 'black' },
+      { de: 'weiß', en: 'white' },
+      { de: 'blau', en: 'blue' },
+      { de: 'rot', en: 'red' }
+    ]
+  },
+  {
+    id: '1',
+    title: 'Möbelgeschäft — Furniture Store',
+    icon: 'Sofa',
+    image: img1,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich drei Personen.', en: 'In the picture I see three people.' },
+      { de: 'Ich sehe einen Mann, eine Frau und eine Verkäuferin.', en: 'I see a man, a woman and a saleswoman.' },
+      { de: 'Sie sind in einem Möbelgeschäft.', en: 'They are in a furniture store.' },
+      { de: 'Ich sehe ein Sofa, einen Tisch, Stühle und einen Schrank.', en: 'I see a sofa, a table, chairs and a wardrobe.' },
+      { de: 'Der Mann möchte Möbel kaufen.', en: 'The man wants to buy furniture.' },
+      { de: 'Die Personen sind gut angezogen.', en: 'The people are well dressed.' },
+      { de: 'Ich glaube, sie suchen Möbel für eine neue Wohnung.', en: 'I think they are looking for furniture for a new apartment.' },
+      { de: 'Die Verkäuferin trägt einen blauen Anzug und ein weißes Hemd.', en: 'The saleswoman is wearing a blue suit and a white shirt.' }
+    ],
+    situation: [
+      { de: 'Wir haben eine neue Wohnung. Wir brauchen Möbel.', en: 'We have a new apartment. We need furniture.' },
+      { de: 'Wir möchten zusammen Möbel kaufen.', en: 'We want to buy furniture together.' },
+      { de: 'Wo kaufen wir die Möbel?', en: 'Where do we buy the furniture?' },
+      { de: '→ Wir kaufen die Möbel im Möbelgeschäft.', en: '→ We buy the furniture in the furniture store.', isAnswer: true },
+      { de: 'Welche Möbel brauchen wir?', en: 'Which furniture do we need?' },
+      { de: '→ Wir brauchen ein Sofa, einen Tisch, Stühle und ein Bett.', en: '→ We need a sofa, a table, chairs and a bed.', isAnswer: true },
+      { de: 'Wie transportieren wir die Möbel?', en: 'How do we transport the furniture?' },
+      { de: '→ Wir fahren mit einem LKW.', en: '→ We go by truck.', isAnswer: true },
+      { de: 'Was kaufen wir noch?', en: 'What else do we buy?' },
+      { de: '→ Wir kaufen einen Schrank und ein Regal.', en: '→ We buy a wardrobe and a shelf.', isAnswer: true },
+      { de: 'Wann kaufen wir die Möbel?', en: 'When do we buy the furniture?' },
+      { de: '→ Wir kaufen die Möbel am Samstag.', en: '→ We buy the furniture on Saturday.', isAnswer: true },
+      { de: 'Was machen wir danach?', en: 'What do we do afterwards?' },
+      { de: '→ Danach gehen wir nach Hause.', en: '→ Afterwards we go home.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'der Anzug', en: 'suit' },
+      { de: 'weiß', en: 'white' },
+      { de: 'blau', en: 'blue' },
+      { de: 'das Sofa', en: 'sofa' },
+      { de: 'der Tisch', en: 'table' },
+      { de: 'der Stuhl', en: 'chair' },
+      { de: 'der Schrank', en: 'wardrobe' },
+      { de: 'das Bett', en: 'bed' },
+      { de: 'das Regal', en: 'shelf' },
+      { de: 'die Möbel', en: 'furniture' },
+      { de: 'die Wohnung', en: 'apartment' },
+      { de: 'kaufen', en: 'to buy' },
+      { de: 'transportieren', en: 'to transport' },
+      { de: 'umziehen', en: 'to move house' },
+      { de: 'neu', en: 'new' },
+      { de: 'groß', en: 'big' },
+      { de: 'klein', en: 'small' }
+    ]
+  },
+  {
+    id: '3',
+    title: 'Auto & Geschenk — Car & Gift',
+    icon: 'Car',
+    image: img3,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich ein rotes Auto.', en: 'In the picture I see a red car.' },
+      { de: 'Ich sehe zwei Frauen.', en: 'I see two women.' },
+      { de: 'Sie stehen vor einem Haus.', en: 'They are standing in front of a house.' },
+      { de: 'Die Mutter gibt der Tochter einen Schlüssel.', en: 'The mother gives the daughter a key.' },
+      { de: 'Die Tochter ist sehr glücklich.', en: 'The daughter is very happy.' },
+      { de: 'Ich glaube, das Auto ist ein Geschenk.', en: 'I think the car is a gift.' },
+      { de: 'Das Auto ist neu.', en: 'The car is new.' },
+      { de: 'Die Tochter trägt einen blauen Pullover und die Mutter trägt eine braune Jacke.', en: 'The daughter is wearing a blue sweater and the mother is wearing a brown jacket.' }
+    ],
+    situation: [
+      { de: 'Wir möchten ein Geschenk kaufen.', en: 'We want to buy a gift.' },
+      { de: 'Was kaufen wir?', en: 'What do we buy?' },
+      { de: '→ Wir kaufen ein Auto.', en: '→ We buy a car.', isAnswer: true },
+      { de: 'Welche Farbe hat das Auto?', en: 'What color is the car?' },
+      { de: '→ Das Auto ist rot.', en: '→ The car is red.', isAnswer: true },
+      { de: 'Ist das Auto neu?', en: 'Is the car new?' },
+      { de: '→ Ja, das Auto ist neu.', en: '→ Yes, the car is new.', isAnswer: true },
+      { de: 'Wer bekommt das Auto?', en: 'Who gets the car?' },
+      { de: '→ Meine Tochter bekommt das Auto.', en: '→ My daughter gets the car.', isAnswer: true },
+      { de: 'Wer bezahlt das Auto?', en: 'Who pays for the car?' },
+      { de: '→ Die Mutter bezahlt das Auto.', en: '→ The mother pays for the car.', isAnswer: true },
+      { de: 'Was brauchen wir für das Auto?', en: 'What do we need for the car?' },
+      { de: '→ Wir brauchen einen Schlüssel.', en: '→ We need a key.', isAnswer: true },
+      { de: 'Kann die Tochter Auto fahren?', en: 'Can the daughter drive?' },
+      { de: '→ Ja, sie hat einen Führerschein.', en: '→ Yes, she has a driving licence.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'braun', en: 'brown' },
+      { de: 'der Pullover', en: 'sweater' },
+      { de: 'blau', en: 'blue' },
+      { de: 'das Auto', en: 'car' },
+      { de: 'der Schlüssel', en: 'key' },
+      { de: 'der Autoschlüssel', en: 'car key' },
+      { de: 'das Geschenk', en: 'gift' },
+      { de: 'die Überraschung', en: 'surprise' },
+      { de: 'das Haus', en: 'house' },
+      { de: 'der Führerschein', en: 'driving licence' },
+      { de: 'neu', en: 'new' },
+      { de: 'rot', en: 'red' },
+      { de: 'glücklich', en: 'happy' },
+      { de: 'schenken', en: 'to give as a present' }
+    ]
+  },
+  {
+    id: '4',
+    title: 'Wandern & Natur — Hiking & Nature',
+    icon: 'Mountain',
+    image: img4,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich zwei Personen.', en: 'In the picture I see two people.' },
+      { de: 'Sie sind in den Bergen.', en: 'They are in the mountains.' },
+      { de: 'Sie wandern zusammen.', en: 'They are hiking together.' },
+      { de: 'Sie tragen Jacken und Rucksäcke.', en: 'They are wearing jackets and backpacks.' },
+      { de: 'Das Wetter ist gut.', en: 'The weather is good.' },
+      { de: 'Im Hintergrund sehe ich Schnee.', en: 'In the background I see snow.' },
+      { de: 'Ich glaube, sie machen Urlaub.', en: 'I think they are on vacation.' },
+      { de: 'Sie tragen dicke, rote und blaue Winterjacken und braune Schuhe.', en: 'They are wearing thick, red and blue winter jackets and brown shoes.' }
+    ],
+    situation: [
+      { de: 'Wir möchten zusammen wandern.', en: 'We want to go hiking together.' },
+      { de: 'Wohin gehen wir?', en: 'Where are we going?' },
+      { de: '→ Wir gehen in die Berge.', en: '→ We are going to the mountains.', isAnswer: true },
+      { de: 'Wie gehen wir in die Berge?', en: 'How do we go to the mountains?' },
+      { de: '→ Wir fahren mit dem Auto.', en: '→ We go by car.', isAnswer: true },
+      { de: 'Was nehmen wir mit?', en: 'What do we take with us?' },
+      { de: '→ Wir nehmen Wasser und Brot mit.', en: '→ We take water and bread with us.', isAnswer: true },
+      { de: 'Was haben wir im Rucksack?', en: 'What do we have in the backpack?' },
+      { de: '→ Wir haben Wasser, Brot und Obst.', en: '→ We have water, bread and fruit.', isAnswer: true },
+      { de: 'Wie ist das Wetter?', en: 'How is the weather?' },
+      { de: '→ Es ist kalt, aber die Sonne scheint.', en: '→ It is cold, but the sun is shining.', isAnswer: true },
+      { de: 'Was machen wir danach?', en: 'What do we do afterwards?' },
+      { de: '→ Danach gehen wir nach Hause.', en: '→ Afterwards we go home.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'die Winterjacke', en: 'winter jacket' },
+      { de: 'braun', en: 'brown' },
+      { de: 'rot', en: 'red' },
+      { de: 'blau', en: 'blue' },
+      { de: 'der Berg', en: 'mountain' },
+      { de: 'die Berge', en: 'mountains' },
+      { de: 'der Wald', en: 'forest' },
+      { de: 'die Natur', en: 'nature' },
+      { de: 'der Rucksack', en: 'backpack' },
+      { de: 'die Karte', en: 'map' },
+      { de: 'der Schnee', en: 'snow' },
+      { de: 'die Sonne', en: 'sun' },
+      { de: 'wandern', en: 'to hike' },
+      { de: 'spazieren gehen', en: 'to go for a walk' },
+      { de: 'kalt', en: 'cold' },
+      { de: 'warm', en: 'warm' },
+      { de: 'schön', en: 'beautiful/nice' }
+    ]
+  },
+  {
+    id: '7',
+    title: 'Kleidung kaufen — Buying Clothes',
+    icon: 'ShoppingBag',
+    image: img7,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich zwei Frauen.', en: 'In the picture I see two women.' },
+      { de: 'Sie sind in einem Geschäft.', en: 'They are in a shop.' },
+      { de: 'Sie kaufen ein Kleid.', en: 'They are buying a dress.' },
+      { de: 'Das Kleid ist blau.', en: 'The dress is blue.' },
+      { de: 'Die Frauen lachen.', en: 'The women are laughing.' },
+      { de: 'Sie sind glücklich.', en: 'They are happy.' },
+      { de: 'Ich glaube, das Kleid gefällt ihnen.', en: 'I think they like the dress.' },
+      { de: 'Eine Frau trägt einen gelben Pullover und die andere Frau trägt ein schwarzes T-Shirt.', en: 'One woman is wearing a yellow sweater and the other woman is wearing a black T-shirt.' }
+    ],
+    situation: [
+      { de: 'Wir möchten Kleidung kaufen.', en: 'We want to buy clothes.' },
+      { de: 'Was möchtest du kaufen?', en: 'What do you want to buy?' },
+      { de: '→ Ich möchte ein Kleid kaufen.', en: '→ I want to buy a dress.', isAnswer: true },
+      { de: 'Welche Farbe möchtest du?', en: 'What color do you want?' },
+      { de: '→ Ich möchte ein blaues Kleid.', en: '→ I want a blue dress.', isAnswer: true },
+      { de: 'Wie viel kostet das Kleid?', en: 'How much does the dress cost?' },
+      { de: '→ Das Kleid kostet 50 Euro.', en: '→ The dress costs 50 euros.', isAnswer: true },
+      { de: 'Gefällt dir das Kleid?', en: 'Do you like the dress?' },
+      { de: '→ Ja, das Kleid ist sehr schön.', en: '→ Yes, the dress is very nice.', isAnswer: true },
+      { de: 'Wer bezahlt das Kleid?', en: 'Who pays for the dress?' },
+      { de: '→ Ich bezahle das Kleid.', en: '→ I pay for the dress.', isAnswer: true },
+      { de: 'Wie bezahlen wir?', en: 'How do we pay?' },
+      { de: '→ Wir bezahlen mit Karte.', en: '→ We pay by card.', isAnswer: true },
+      { de: 'Was machen wir danach?', en: 'What do we do afterwards?' },
+      { de: '→ Danach gehen wir nach Hause.', en: '→ Afterwards we go home.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'gelb', en: 'yellow' },
+      { de: 'schwarz', en: 'black' },
+      { de: 'der Pullover', en: 'sweater' },
+      { de: 'das Kleid', en: 'dress' },
+      { de: 'die Kleidung', en: 'clothes' },
+      { de: 'das Geschäft', en: 'shop' },
+      { de: 'der Laden', en: 'shop' },
+      { de: 'die Jacke', en: 'jacket' },
+      { de: 'die Hose', en: 'trousers' },
+      { de: 'das T-Shirt', en: 'T-shirt' },
+      { de: 'die Schuhe', en: 'shoes' },
+      { de: 'blau', en: 'blue' },
+      { de: 'schön', en: 'beautiful/nice' },
+      { de: 'teuer', en: 'expensive' },
+      { de: 'billig', en: 'cheap' },
+      { de: 'kaufen', en: 'to buy' },
+      { de: 'bezahlen', en: 'to pay' }
+    ]
+  },
+  {
+    id: '11',
+    title: 'Wohnen — Living',
+    icon: 'Home',
+    image: img11,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich eine Wohnung.', en: 'In the picture I see an apartment.' },
+      { de: 'Die Wohnung hat einen kleinen Balkon und einen Garten.', en: 'The apartment has a small balcony and a garden.' },
+      { de: 'Ich sehe auch Möbel und eine Küche.', en: 'I also see furniture and a kitchen.' },
+      { de: 'Die Wohnung sieht sehr schön aus.', en: 'The apartment looks very nice.' },
+      { de: 'Eine Frau sitzt auf dem Sofa. Sie trägt ein graues T-Shirt.', en: 'A woman is sitting on the sofa. She is wearing a grey T-shirt.' }
+    ],
+    situation: [
+      { de: 'Hast du einen Balkon?', en: 'Do you have a balcony?' },
+      { de: '→ Ja, mein Balkon ist klein.', en: '→ Yes, my balcony is small.', isAnswer: true },
+      { de: 'Wie viele Zimmer hat deine Wohnung?', en: 'How many rooms does your apartment have?' },
+      { de: '→ Meine Wohnung hat drei Zimmer.', en: '→ My apartment has three rooms.', isAnswer: true },
+      { de: 'Wie hoch ist die Miete?', en: 'How much is the rent?' },
+      { de: '→ Die Miete ist 300 Euro.', en: '→ The rent is 300 euros.', isAnswer: true },
+      { de: 'Kochst du gern in der Küche?', en: 'Do you like cooking in the kitchen?' },
+      { de: '→ Ja, sehr gern.', en: '→ Yes, very much.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'grau', en: 'grey' },
+      { de: 'das T-Shirt', en: 'T-shirt' },
+      { de: 'der Balkon', en: 'balcony' },
+      { de: 'die Küche', en: 'kitchen' },
+      { de: 'die Miete', en: 'rent' },
+      { de: 'die Möbel', en: 'furniture' },
+      { de: 'das Zimmer', en: 'room' },
+      { de: 'der Garten', en: 'garden' },
+      { de: 'die Wohnung', en: 'apartment' }
+    ]
+  },
+  {
+    id: '12',
+    title: 'Arbeit und Schule — Work & School',
+    icon: 'Briefcase',
+    image: img12,
+    bildbeschreibung: [
+      { de: 'Auf dem Bild sehe ich eine Person am Computer.', en: 'In the picture I see a person at the computer.' },
+      { de: 'Die Person lernt für den Deutschkurs.', en: 'The person is studying for the German course.' },
+      { de: 'Im Hintergrund sehe ich Kollegen.', en: 'In the background I see colleagues.' },
+      { de: 'Sie machen eine Pause.', en: 'They are taking a break.' },
+      { de: 'Die Person am Computer trägt ein weißes Hemd und eine Brille.', en: 'The person at the computer is wearing a white shirt and glasses.' }
+    ],
+    situation: [
+      { de: 'Wann machst du Pause?', en: 'When do you take a break?' },
+      { de: '→ Ich mache um ein Uhr Pause.', en: '→ I take a break at one o\'clock.', isAnswer: true },
+      { de: 'Wie sind deine Kollegen?', en: 'How are your colleagues?' },
+      { de: '→ Meine Kollegen sind sehr nett.', en: '→ My colleagues are very nice.', isAnswer: true },
+      { de: 'Machst du jeden Tag Hausaufgaben?', en: 'Do you do homework every day?' },
+      { de: '→ Ja, eine Stunde.', en: '→ Yes, for one hour.', isAnswer: true },
+      { de: 'Wann hast du Urlaub?', en: 'When do you have a vacation?' },
+      { de: '→ Im Dezember.', en: '→ In December.', isAnswer: true }
+    ],
+    vocabulary: [
+      { de: 'die Brille', en: 'glasses' },
+      { de: 'weiß', en: 'white' },
+      { de: 'das Hemd', en: 'shirt' },
+      { de: 'die Kollegen', en: 'colleagues' },
+      { de: 'die Hausaufgaben', en: 'homework' },
+      { de: 'der Urlaub', en: 'vacation' },
+      { de: 'die Pause', en: 'break' },
+      { de: 'der Chef', en: 'boss' },
+      { de: 'der Computer', en: 'computer' },
+      { de: 'der Deutschkurs', en: 'German course' }
+    ]
+  }
+];

@@ -1,0 +1,8 @@
+{
+  "name": "A1 Deutsch - Sprechen",
+  "description": "German A1 Exam Preparation App - Sprechen Module",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
