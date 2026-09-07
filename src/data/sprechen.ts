@@ -125,25 +125,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'BookOpen',
     image: img14,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich einen Mann und eine Frau.", en: "In the picture I see a man and a woman." },
-      { de: "Sie sind in einer Buchhandlung.", en: "They are in a bookstore." },
-      { de: "Links sehe ich einen Kunden.", en: "On the left I see a customer." },
-      { de: "Rechts sehe ich eine Verkäuferin.", en: "On the right I see a saleswoman." },
-      { de: "Der Mann trägt ein blaues Hemd.", en: "The man is wearing a blue shirt." },
-      { de: "Die Verkäuferin trägt eine gelbe Jacke.", en: "The saleswoman is wearing a yellow jacket." },
-      { de: "Im Hintergrund sehe ich viele Bücher in den Regalen.", en: "In the background I see many books on the shelves." },
-      { de: "Die beiden Personen sind glücklich.", en: "Both people are happy." },
-      { de: "Sie lachen.", en: "They are laughing." },
-      { de: "Ich glaube, der Kunde möchte ein Buch kaufen.", en: "I think the customer wants to buy a book." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich einen Mann und eine Frau.",
+            "en": "In the picture I see a man and a woman."
+      },
+      {
+            "de": "Sie sind in einer Buchhandlung.",
+            "en": "They are in a bookstore."
+      },
+      {
+            "de": "Links sehe ich einen Mann. Er ist Kunde.",
+            "en": "On the left I see a man. He is a customer."
+      },
+      {
+            "de": "Rechts sehe ich eine Frau. Sie ist Verkäuferin.",
+            "en": "On the right I see a woman. She is a saleswoman."
+      },
+      {
+            "de": "Der Mann trägt ein Hemd.",
+            "en": "The man is wearing a shirt."
+      },
+      {
+            "de": "Im Hintergrund sehe ich viele Bücher in Regalen.",
+            "en": "In the background I see many books on shelves."
+      },
+      {
+            "de": "Sie sprechen und lachen.",
+            "en": "They are talking and laughing."
+      },
+      {
+            "de": "Ich glaube, der Mann möchte ein Buch kaufen.",
+            "en": "I think the man wants to buy a book."
+      }
+],
     situation: [
-      { de: "Wie viele Personen sehen Sie?", en: "How many people do you see?" },
-      { de: "→ Ich sehe zwei Personen: einen Mann und eine Frau.", en: "→ I see two people: a man and a woman.", isAnswer: true },
-      { de: "Wo sind diese Personen?", en: "Where are these people?" },
-      { de: "→ Sie sind in einer Buchhandlung oder einer Bibliothek.", en: "→ They are in a bookstore or a library.", isAnswer: true },
-      { de: "Was machen diese Personen?", en: "What are these people doing?" },
-      { de: "→ Der Mann kauft ein Buch und spricht mit der Verkäuferin.", en: "→ The man is buying a book and talking to the saleswoman.", isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich zwei Personen: einen Mann und eine Frau.",
+            "en": "→ In the picture I see two people: a man and a woman.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind in einer Buchhandlung.",
+            "en": "→ They are in a bookstore.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie sprechen und lachen. Der Mann kauft ein Buch.",
+            "en": "→ They are talking and laughing. The man is buying a book.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: "die Buchhandlung", en: "the bookstore" },
       { de: "die Bibliothek", en: "the library" },
@@ -163,25 +206,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'ShoppingBag',
     image: img15,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich einen Mann und eine Frau.", en: "In the picture I see a man and a woman." },
-      { de: "Sie sind in einem Schuhgeschäft.", en: "They are in a shoe store." },
-      { de: "Links sitzt ein Mann auf einem roten Stuhl.", en: "On the left sits a man on a red chair." },
-      { de: "Er ist der Kunde und schaut sich Schuhe an.", en: "He is the customer and looks at shoes." },
-      { de: "Rechts steht eine Verkäuferin und zeigt ihm einen Schuh.", en: "On the right stands a saleswoman and shows him a shoe." },
-      { de: "Der Mann hat eine Mütze auf dem Kopf.", en: "The man has a cap on his head." },
-      { de: "Die Frau trägt eine schwarze Hose und ein schwarzes Oberteil.", en: "The woman is wearing black pants and a black top." },
-      { de: "Auf dem Boden liegen Kartons und Schuhe.", en: "On the floor there are boxes and shoes." },
-      { de: "Im Hintergrund sehe ich viele Schuhe in Regalen.", en: "In the background I see many shoes on shelves." },
-      { de: "Ich glaube, der Mann möchte neue Schuhe kaufen.", en: "I think the customer wants to buy new shoes." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich einen Mann und eine Frau.",
+            "en": "In the picture I see a man and a woman."
+      },
+      {
+            "de": "Sie sind in einem Schuhgeschäft.",
+            "en": "They are in a shoe store."
+      },
+      {
+            "de": "Links sitzt ein Mann auf einem Stuhl.",
+            "en": "On the left a man is sitting on a chair."
+      },
+      {
+            "de": "Rechts steht eine Frau.",
+            "en": "On the right stands a woman."
+      },
+      {
+            "de": "In der Mitte sehe ich Schuhe.",
+            "en": "In the middle I see shoes."
+      },
+      {
+            "de": "Die Frau zeigt dem Mann einen Schuh.",
+            "en": "The woman shows the man a shoe."
+      },
+      {
+            "de": "Im Hintergrund sehe ich viele Schuhe im Regal.",
+            "en": "In the background I see many shoes on the shelf."
+      },
+      {
+            "de": "Ich glaube, der Mann möchte Schuhe kaufen.",
+            "en": "I think the man wants to buy shoes."
+      }
+],
     situation: [
-      { de: "Wie viele Personen sehen Sie?", en: "How many people do you see?" },
-      { de: "→ Ich sehe zwei Personen: einen Mann und eine Frau.", en: "→ I see two people: a man and a woman.", isAnswer: true },
-      { de: "Wo sind diese Personen?", en: "Where are these people?" },
-      { de: "→ Sie sind in einem Schuhgeschäft.", en: "→ They are in a shoe store.", isAnswer: true },
-      { de: "Was machen diese Personen?", en: "What are these people doing?" },
-      { de: "→ Der Mann probiert Schuhe an und die Verkäuferin hilft ihm.", en: "→ The man is trying on shoes and the saleswoman is helping him.", isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich einen Mann und eine Frau.",
+            "en": "→ In the picture I see a man and a woman.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind in einem Schuhgeschäft.",
+            "en": "→ They are in a shoe store.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Der Mann probiert Schuhe an. Die Frau hilft ihm.",
+            "en": "→ The man is trying on shoes. The woman is helping him.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: "das Schuhgeschäft", en: "the shoe store" },
       { de: "der Schuh (Plural: die Schuhe)", en: "the shoe (shoes)" },
@@ -201,25 +287,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Wrench',
     image: img16,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich einen Mann und eine Frau.", en: "In the picture I see a man and a woman." },
-      { de: "Sie sind in einer Autowerkstatt.", en: "They are in a car repair shop." },
-      { de: "In der Mitte steht ein rotes Auto.", en: "In the middle stands a red car." },
-      { de: "Die Motorhaube vom Auto ist offen.", en: "The hood of the car is open." },
-      { de: "Links steht der Mechaniker mit einer schwarzen Latzhose.", en: "On the left stands the mechanic with black overalls." },
-      { de: "Er hält Dokumente in der Hand.", en: "He holds documents in his hand." },
-      { de: "Rechts steht die Kundin mit einer blauen Jeansjacke.", en: "On the right stands the female customer with a blue denim jacket." },
-      { de: "Die beiden Personen sprechen über das Auto.", en: "Both people are talking about the car." },
-      { de: "Das rote Auto ist kaputt.", en: "The red car is broken." },
-      { de: "Ich glaube, der Mechaniker repariert das Auto.", en: "I think the mechanic repairs the car." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich einen Mann und eine Frau.",
+            "en": "In the picture I see a man and a woman."
+      },
+      {
+            "de": "Sie sind in einer Autowerkstatt.",
+            "en": "They are in a car repair shop."
+      },
+      {
+            "de": "In der Mitte steht ein rotes Auto.",
+            "en": "In the middle stands a red car."
+      },
+      {
+            "de": "Das Auto ist kaputt.",
+            "en": "The car is broken."
+      },
+      {
+            "de": "Links steht ein Mann. Er ist Mechaniker.",
+            "en": "On the left stands a man. He is a mechanic."
+      },
+      {
+            "de": "Rechts steht eine Frau.",
+            "en": "On the right stands a woman."
+      },
+      {
+            "de": "Sie sprechen über das Auto.",
+            "en": "They are talking about the car."
+      },
+      {
+            "de": "Ich glaube, der Mann repariert das Auto.",
+            "en": "I think the man repairs the car."
+      }
+],
     situation: [
-      { de: "Wie viele Personen sehen Sie?", en: "How many people do you see?" },
-      { de: "→ Ich sehe zwei Personen: einen Mann und eine Frau.", en: "→ I see two people: a man and a woman.", isAnswer: true },
-      { de: "Wo sind diese Personen?", en: "Where are these people?" },
-      { de: "→ Sie sind in einer Autowerkstatt.", en: "→ They are in a car repair shop.", isAnswer: true },
-      { de: "Was machen diese Personen?", en: "What are these people doing?" },
-      { de: "→ Sie sprechen über das rote Auto. Das Auto ist kaputt.", en: "→ They are talking about the red car. The car is broken.", isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich einen Mann, eine Frau und ein rotes Auto.",
+            "en": "→ In the picture I see a man, a woman, and a red car.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind in einer Autowerkstatt.",
+            "en": "→ They are in a car repair shop.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie sprechen über das rote Auto. Das Auto ist kaputt.",
+            "en": "→ They are talking about the red car. The car is broken.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: "die Autowerkstatt", en: "the car repair shop" },
       { de: "das Auto", en: "the car" },
@@ -239,27 +368,64 @@ export const sprechenTopics: Topic[] = [
     icon: 'Building',
     image: img17,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich zwei Personen.", en: "In the picture I see two people." },
-      { de: "Sie sind an einer Hotelrezeption.", en: "They are at a hotel reception." },
-      { de: "Links steht ein Mann hinter der Rezeption.", en: "On the left stands a man behind the reception." },
-      { de: "Er ist der Mitarbeiter im Hotel.", en: "He is the employee at the hotel." },
-      { de: "Rechts steht eine Frau mit einem Koffer.", en: "On the right stands a woman with a suitcase." },
-      { de: "Sie ist der Gast.", en: "She is the guest." },
-      { de: "Beide Personen sind gut angezogen.", en: "Both people are well-dressed." },
-      { de: "Der Mann gibt der Frau eine Zimmerkarte.", en: "The man gives the woman a room card." },
-      { de: "Die beiden Personen lächeln und sind freundlich.", en: "Both people are smiling and friendly." },
-      { de: "Ich glaube, die Frau möchte ein Zimmer für eine Woche buchen.", en: "I think the woman wants to book a room for one week." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich zwei Personen: einen Mann und eine Frau.",
+            "en": "In the picture I see two people: a man and a woman."
+      },
+      {
+            "de": "Sie sind an der Hotelrezeption.",
+            "en": "They are at the hotel reception."
+      },
+      {
+            "de": "Links steht ein Mann. Er arbeitet im Hotel.",
+            "en": "On the left stands a man. He works at the hotel."
+      },
+      {
+            "de": "Rechts steht eine Frau mit einem Koffer.",
+            "en": "On the right stands a woman with a suitcase."
+      },
+      {
+            "de": "Die Personen sprechen und lächeln.",
+            "en": "The people are talking and smiling."
+      },
+      {
+            "de": "Der Mann hilft der Frau.",
+            "en": "The man helps the woman."
+      },
+      {
+            "de": "Ich glaube, die Frau möchte ein Zimmer buchen.",
+            "en": "I think the woman wants to book a room."
+      }
+],
     situation: [
-      { de: "Wer arbeitet im Hotel?", en: "Who works in the hotel?" },
-      { de: "→ Der Mann ist der Mitarbeiter und arbeitet im Hotel.", en: "→ The man is the employee and works in the hotel.", isAnswer: true },
-      { de: "Was möchte die Frau machen?", en: "What does the woman want to do?" },
-      { de: "→ Sie möchte ein Hotelzimmer reservieren.", en: "→ She wants to reserve a hotel room.", isAnswer: true },
-      { de: "Wie lange möchte sie bleiben?", en: "How long does she want to stay?" },
-      { de: "→ Sie möchte eine Woche bleiben.", en: "→ She wants to stay for one week.", isAnswer: true },
-      { de: "Möchte sie Frühstück haben?", en: "Does she want to have breakfast?" },
-      { de: "→ Ja, sie möchte ein Zimmer mit Frühstück.", en: "→ Yes, she wants a room with breakfast.", isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich zwei Personen an einer Rezeption.",
+            "en": "→ In the picture I see two people at a reception.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind im Hotel.",
+            "en": "→ They are in the hotel.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie sprechen. Die Frau bucht ein Zimmer.",
+            "en": "→ They are talking. The woman is booking a room.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: "die Hotelrezeption", en: "the hotel reception" },
       { de: "gut angezogen", en: "well-dressed" },
@@ -280,27 +446,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Activity',
     image: img18,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich zwei Personen.", en: "In the picture I see two people." },
-      { de: "Links sitzt ein Arzt und rechts sitzt eine Patientin.", en: "On the left sits a doctor and on the right sits a patient." },
-      { de: "Sie sind in einer Arztpraxis oder in einem Krankenhaus.", en: "They are in a doctor's office or in a hospital." },
-      { de: "Der Arzt trägt einen weißen Kittel und ein Stethoskop.", en: "The doctor is wearing a white coat and a stethoscope." },
-      { de: "Die Frau hat Schmerzen.", en: "The woman is in pain." },
-      { de: "Sie hält ihren Kopf und ihren Bauch.", en: "She is holding her head and her stomach." },
-      { de: "Sie hat Kopfschmerzen und Bauchschmerzen.", en: "She has a headache and a stomachache." },
-      { de: "Der Arzt schaut die Frau an und hört zu.", en: "The doctor looks at the woman and listens." },
-      { de: "Im Hintergrund sehe ich ein Fenster und Plakate an der Wand.", en: "In the background I see a window and posters on the wall." },
-      { de: "Ich glaube, die Frau ist krank und braucht ein Medikament.", en: "I think the woman is sick and needs medication." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich zwei Personen: einen Mann und eine Frau.",
+            "en": "In the picture I see two people: a man and a woman."
+      },
+      {
+            "de": "Sie sind in einer Arztpraxis.",
+            "en": "They are in a doctor's office."
+      },
+      {
+            "de": "Links sitzt ein Arzt.",
+            "en": "On the left sits a doctor."
+      },
+      {
+            "de": "Rechts sitzt eine Frau. Sie ist krank.",
+            "en": "On the right sits a woman. She is sick."
+      },
+      {
+            "de": "Die Frau hat Kopfschmerzen.",
+            "en": "The woman has a headache."
+      },
+      {
+            "de": "Der Arzt hört zu und hilft der Frau.",
+            "en": "The doctor listens and helps the woman."
+      },
+      {
+            "de": "Im Hintergrund sehe ich ein Fenster.",
+            "en": "In the background I see a window."
+      },
+      {
+            "de": "Ich glaube, die Frau braucht ein Medikament.",
+            "en": "I think the woman needs medication."
+      }
+],
     situation: [
-      { de: "Wer ist auf dem Bild zu sehen?", en: "Who can be seen in the picture?" },
-      { de: "→ Ich sehe einen Arzt und eine kranke Patientin.", en: "→ I see a doctor and a sick patient.", isAnswer: true },
-      { de: "Wo befinden sich die Personen?", en: "Where are the people located?" },
-      { de: "→ Sie sind in einer Arztpraxis.", en: "→ They are in a doctor's office.", isAnswer: true },
-      { de: "Welche Probleme oder Symptome hat die Frau?", en: "What problems or symptoms does the woman have?" },
-      { de: "→ Sie hat Kopfschmerzen und Bauchschmerzen. Sie fühlt sich nicht gut.", en: "→ She has a headache and a stomachache. She does not feel well.", isAnswer: true },
-      { de: "Was macht der Arzt von Beruf?", en: "What is the doctor's profession?" },
-      { de: "→ Er ist Arzt oder Mediziner.", en: "→ He is a doctor or a medical professional.", isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich einen Arzt und eine Patientin.",
+            "en": "→ In the picture I see a doctor and a patient.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind in einer Arztpraxis.",
+            "en": "→ They are in a doctor's office.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Der Arzt spricht mit der Frau. Die Frau ist krank.",
+            "en": "→ The doctor is talking with the woman. The woman is sick.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: "der Arzt", en: "the doctor (male)" },
       { de: "die Patientin", en: "the patient (female)" },
@@ -478,26 +685,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Coffee',
     image: img8,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich ein leckeres Essen auf einem Holztisch.", en: "In the picture I see a delicious meal on a wooden table." },
-      { de: "In der Mitte steht ein weißer Teller mit Reis und Hähnchen.", en: "In the middle stands a white plate with rice and chicken." },
-      { de: "Rechts steht eine Schale mit frischem Obst.", en: "On the right stands a bowl with fresh fruit." },
-      { de: "In der Schale sehe ich Melone, Weintrauben und Kiwi.", en: "In the bowl I see melon, grapes, and kiwi." },
-      { de: "Links steht eine Tasse mit heißem Kaffee.", en: "On the left stands a cup with hot coffee." },
-      { de: "Oben rechts sehe ich ein Glas Wasser mit Zitrone.", en: "At the top right I see a glass of water with lemon." },
-      { de: "Neben dem Teller liegen eine Gabel und ein Löffel.", en: "Next to the plate lie a fork and a spoon." },
-      { de: "Alles sieht sehr frisch und gesund aus.", en: "Everything looks very fresh and healthy." },
-      { de: "Ich glaube, das ist ein Mittagessen.", en: "I think this is lunch." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich Essen und Trinken auf einem Tisch.",
+            "en": "In the picture I see food and drinks on a table."
+      },
+      {
+            "de": "In der Mitte steht ein weißer Teller mit Reis und Hähnchen.",
+            "en": "In the middle stands a white plate with rice and chicken."
+      },
+      {
+            "de": "Links steht eine Tasse Kaffee.",
+            "en": "On the left stands a cup of coffee."
+      },
+      {
+            "de": "Rechts sehe ich Obst: Melone und Kiwi.",
+            "en": "On the right I see fruit: melon and kiwi."
+      },
+      {
+            "de": "Oben rechts steht ein Glas Wasser.",
+            "en": "At the top right stands a glass of water."
+      },
+      {
+            "de": "Neben dem Teller liegen eine Gabel und ein Löffel.",
+            "en": "Next to the plate lie a fork and a spoon."
+      },
+      {
+            "de": "Das Essen sieht sehr lecker und frisch aus.",
+            "en": "The food looks very delicious and fresh."
+      },
+      {
+            "de": "Ich glaube, das ist ein gesundes Mittagessen.",
+            "en": "I think this is a healthy lunch."
+      }
+],
     situation: [
-      { de: 'Was liegt auf dem Teller?', en: 'What is on the plate?' },
-      { de: '→ Auf dem Teller ist Reis mit Hähnchen.', en: '→ On the plate is rice with chicken.', isAnswer: true },
-      { de: 'Welches Obst liegt in der Schale?', en: 'Which fruit is in the bowl?' },
-      { de: '→ In der Schale liegen Melone, Weintrauben und Kiwi.', en: '→ In the bowl are melon, grapes, and kiwi.', isAnswer: true },
-      { de: 'Was trinkt man hier?', en: 'What do you drink here?' },
-      { de: '→ Man trinkt Kaffee und Wasser mit Zitrone.', en: '→ You drink coffee and water with lemon.', isAnswer: true },
-      { de: 'Welches Besteck sieht man?', en: 'Which cutlery do you see?' },
-      { de: '→ Man sieht eine Gabel und einen Löffel.', en: '→ You see a fork and a spoon.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich einen Teller mit Reis und Fleisch.",
+            "en": "→ In the picture I see a plate with rice and meat.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was gibt es zu trinken?",
+            "en": "What is there to drink?"
+      },
+      {
+            "de": "→ Es gibt eine Tasse Kaffee und ein Glas Wasser.",
+            "en": "→ There is a cup of coffee and a glass of water.",
+            "isAnswer": true
+      },
+      {
+            "de": "Welches Besteck liegt auf dem Tisch?",
+            "en": "Which cutlery is lying on the table?"
+      },
+      {
+            "de": "→ Auf dem Tisch liegen eine Gabel und ein Löffel.",
+            "en": "→ On the table lie a fork and a spoon.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'das Essen', en: 'the food / the meal' },
       { de: 'der Teller', en: 'the plate' },
@@ -519,26 +768,64 @@ export const sprechenTopics: Topic[] = [
     icon: 'ShoppingCart',
     image: img9,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich zwei Frauen im Supermarkt.", en: "In the picture I see two women in the supermarket." },
-      { de: "Links steht die Kundin und kauft Lebensmittel ein.", en: "On the left stands the customer and buys groceries." },
-      { de: "Rechts sitzt die Kassiererin an der Kasse.", en: "On the right sits the cashier at the checkout." },
-      { de: "Die Kassiererin trägt blaue Arbeitskleidung.", en: "The cashier is wearing blue work clothes." },
-      { de: "Auf dem Kassenband liegen Obst, Gemüse und eine Ananas.", en: "On the conveyor belt lie fruit, vegetables, and a pineapple." },
-      { de: "Die Kundin gibt der Kassiererin Geld.", en: "The customer gives the cashier money." },
-      { de: "Sie bezahlt ihre Einkäufe bar.", en: "She pays for her purchases in cash." },
-      { de: "Die beiden Frauen lächeln freundlich.", en: "Both women smile friendly." },
-      { de: "Ich glaube, die Kundin kocht heute Abend ein gesundes Essen.", en: "I think the customer is cooking a healthy meal tonight." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich zwei Frauen im Supermarkt.",
+            "en": "In the picture I see two women in the supermarket."
+      },
+      {
+            "de": "Links steht eine Kundin und kauft ein.",
+            "en": "On the left stands a customer and shops."
+      },
+      {
+            "de": "Rechts sitzt eine Kassiererin an der Kasse.",
+            "en": "On the right sits a cashier at the checkout."
+      },
+      {
+            "de": "Auf dem Kassenband sehe ich Obst und Gemüse.",
+            "en": "On the conveyor belt I see fruit and vegetables."
+      },
+      {
+            "de": "Die Kundin bezahlt mit Geld.",
+            "en": "The customer pays with money."
+      },
+      {
+            "de": "Die Frauen sprechen und lachen freundlich.",
+            "en": "The women talk and laugh friendly."
+      },
+      {
+            "de": "Ich glaube, die Kundin kauft Essen für heute Abend.",
+            "en": "I think the customer is buying food for tonight."
+      }
+],
     situation: [
-      { de: 'Wo ist die Frau?', en: 'Where is the woman?' },
-      { de: '→ Sie ist im Supermarkt.', en: '→ She is in the supermarket.', isAnswer: true },
-      { de: 'Was macht die Frau?', en: 'What is the woman doing?' },
-      { de: '→ Sie kauft ein und bezahlt.', en: '→ She is shopping and paying.', isAnswer: true },
-      { de: 'Wie bezahlt sie?', en: 'How does she pay?' },
-      { de: '→ Sie bezahlt bar mit Geld.', en: '→ She pays in cash with money.', isAnswer: true },
-      { de: 'Was kauft sie?', en: 'What is she buying?' },
-      { de: '→ Sie kauft Lebensmittel, zum Beispiel eine Ananas.', en: '→ She is buying groceries, for example a pineapple.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich eine Kundin und eine Kassiererin im Supermarkt.",
+            "en": "→ In the picture I see a customer and a cashier in the supermarket.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind im Supermarkt an der Kasse.",
+            "en": "→ They are in the supermarket at the checkout.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was macht die Kundin?",
+            "en": "What is the customer doing?"
+      },
+      {
+            "de": "→ Sie kauft Obst und Gemüse und bezahlt bar.",
+            "en": "→ She buys fruit and vegetables and pays cash.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'der Supermarkt', en: 'the supermarket' },
       { de: 'einkaufen', en: 'to shop / to go shopping' },
@@ -556,27 +843,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Gamepad2',
     image: img10,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich eine Gruppe von Freunden in einem Garten.", en: "In the picture I see a group of friends in a garden." },
-      { de: "Das Wetter ist schön und die Sonne scheint.", en: "The weather is beautiful and the sun is shining." },
-      { de: "Im Vordergrund liegt eine Frau auf einer Decke.", en: "In the foreground a woman is lying on a blanket." },
-      { de: "Sie hat eine Sonnenbrille und liest ein Buch.", en: "She has sunglasses and is reading a book." },
-      { de: "Neben ihr sitzen zwei Männer auf dem grünen Rasen.", en: "Next to her two men are sitting on the green lawn." },
-      { de: "Sie trinken Bier aus Flaschen und unterhalten sich.", en: "They are drinking beer from bottles and talking." },
-      { de: "Auf dem Gras liegt auch ein Fußball.", en: "On the grass there is also a soccer ball." },
-      { de: "Im Hintergrund sitzen weitere Freunde an einem Tisch.", en: "In the background more friends are sitting at a table." },
-      { de: "Alle Personen sind entspannt und glücklich.", en: "All people are relaxed and happy." },
-      { de: "Ich glaube, sie haben am Wochenende viel Spaß zusammen.", en: "I think they are having a lot of fun together at the weekend." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich Freunde im Garten.",
+            "en": "In the picture I see friends in the garden."
+      },
+      {
+            "de": "Das Wetter ist sehr schön und die Sonne scheint.",
+            "en": "The weather is very nice and the sun is shining."
+      },
+      {
+            "de": "Vorne liegt eine Frau auf einer Decke und liest ein Buch.",
+            "en": "In front a woman lies on a blanket and reads a book."
+      },
+      {
+            "de": "Zwei Männer sitzen auf dem Gras und trinken Bier.",
+            "en": "Two men are sitting on the grass and drinking beer."
+      },
+      {
+            "de": "Auf dem Boden liegt ein Fußball.",
+            "en": "On the ground lies a soccer ball."
+      },
+      {
+            "de": "Im Hintergrund sitzen Freunde an einem Tisch.",
+            "en": "In the background friends are sitting at a table."
+      },
+      {
+            "de": "Sie sprechen und lachen.",
+            "en": "They are talking and laughing."
+      },
+      {
+            "de": "Ich glaube, sie haben Wochenende und entspannen sich.",
+            "en": "I think it is the weekend and they are relaxing."
+      }
+],
     situation: [
-      { de: 'Wo sind die Personen?', en: 'Where are the people?' },
-      { de: '→ Sie sind zusammen in einem Garten.', en: '→ They are together in a garden.', isAnswer: true },
-      { de: 'Was macht die Frau im Vordergrund?', en: 'What is the woman in the foreground doing?' },
-      { de: '→ Sie liegt auf einer Decke und liest ein Buch.', en: '→ She is lying on a blanket and reading a book.', isAnswer: true },
-      { de: 'Was trinken die Männer?', en: 'What are the men drinking?' },
-      { de: '→ Sie trinken Bier aus Flaschen und Gläsern.', en: '→ They are drinking beer from bottles and glasses.', isAnswer: true },
-      { de: 'Welcher Sportartikel liegt auf dem Rasen?', en: 'Which sports item is lying on the lawn?' },
-      { de: '→ Ein Fußball liegt auf dem Rasen.', en: '→ A soccer ball is lying on the lawn.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich viele Freunde draußen im Garten.",
+            "en": "→ In the picture I see many friends outside in the garden.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was macht die Frau vorne?",
+            "en": "What is the woman in front doing?"
+      },
+      {
+            "de": "→ Sie liegt auf einer Decke und liest ein Buch.",
+            "en": "→ She lies on a blanket and reads a book.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen die Männer?",
+            "en": "What are the men doing?"
+      },
+      {
+            "de": "→ Sie sitzen auf dem Gras, sprechen und trinken Bier.",
+            "en": "→ They are sitting on the grass, talking, and drinking beer.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'die Freizeit', en: 'the free time / leisure' },
       { de: 'die Freunde', en: 'the friends' },
@@ -596,26 +924,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Plane',
     image: img5,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich eine Familie am Flughafen.", en: "In the picture I see a family at the airport." },
-      { de: "Man sieht die Eltern und drei Kinder.", en: "You see the parents and three children." },
-      { de: "Die Familie steht vor dem Flugsteig Gate 24.", en: "The family is standing in front of gate 24." },
-      { de: "Im Hintergrund sehe ich Bildschirme mit Flügen.", en: "In the background I see screens with flights." },
-      { de: "Die Personen haben Koffer und Rucksäcke dabei.", en: "The people have suitcases and backpacks with them." },
-      { de: "Ein Koffer im Vordergrund ist rot.", en: "One suitcase in the foreground is red." },
-      { de: "Alle Personen lachen und freuen sich sehr.", en: "All people are laughing and very happy." },
-      { de: "Sie sind bequem für die Reise angezogen.", en: "They are comfortably dressed for the trip." },
-      { de: "Ich glaube, die Familie fliegt jetzt in den Urlaub.", en: "I think the family is flying on vacation now." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich eine Familie am Flughafen.",
+            "en": "In the picture I see a family at the airport."
+      },
+      {
+            "de": "Ich sehe fünf Personen: die Eltern und drei Kinder.",
+            "en": "I see five people: the parents and three children."
+      },
+      {
+            "de": "Sie stehen vor Gate 24.",
+            "en": "They are standing in front of gate 24."
+      },
+      {
+            "de": "Sie haben Koffer und Taschen dabei.",
+            "en": "They have suitcases and bags with them."
+      },
+      {
+            "de": "Ein Koffer ist rot.",
+            "en": "One suitcase is red."
+      },
+      {
+            "de": "Alle Personen lachen und freuen sich.",
+            "en": "All people are laughing and happy."
+      },
+      {
+            "de": "Im Hintergrund sehe ich Bildschirme.",
+            "en": "In the background I see screens."
+      },
+      {
+            "de": "Ich glaube, die Familie fliegt in den Urlaub.",
+            "en": "I think the family is flying on vacation."
+      }
+],
     situation: [
-      { de: 'Wo ist die Familie?', en: 'Where is the family?' },
-      { de: '→ Die Familie ist am Flughafen.', en: '→ The family is at the airport.', isAnswer: true },
-      { de: 'Wie viele Kinder hat die Familie?', en: 'How many children does the family have?' },
-      { de: '→ Die Familie hat drei Kinder: ein Mädchen und zwei Jungen.', en: '→ The family has three children: one girl and two boys.', isAnswer: true },
-      { de: 'Was hat die Familie dabei?', en: 'What does the family have with them?' },
-      { de: '→ Sie haben Koffer und Rucksäcke für die Reise.', en: '→ They have suitcases and backpacks for the trip.', isAnswer: true },
-      { de: 'Welche Nummer hat das Flugsteig (Gate)?', en: 'What number is the gate?' },
-      { de: '→ Das ist Gate Nummer 24.', en: '→ That is gate number 24.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich eine Familie mit drei Kindern.",
+            "en": "→ In the picture I see a family with three children.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind am Flughafen vor dem Flugsteig.",
+            "en": "→ They are at the airport in front of the gate.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie warten auf das Flugzeug und reisen in den Urlaub.",
+            "en": "→ They are waiting for the plane and traveling on vacation.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'der Flughafen', en: 'the airport' },
       { de: 'die Familie', en: 'the family' },
@@ -635,26 +1005,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Train',
     image: img6,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich einen Bahnhof.", en: "In the picture I see a train station." },
-      { de: "Am Gleis 7 steht ein großer, roter Zug.", en: "At track 7 stands a big, red train." },
-      { de: "Auf der blauen Anzeige steht das Ziel Frankfurt.", en: "On the blue display is the destination Frankfurt." },
-      { de: "Auf dem Bahnsteig steht eine Familie mit Kindern.", en: "On the platform stands a family with children." },
-      { de: "Sie haben mehrere Koffer dabei.", en: "They have several suitcases with them." },
-      { de: "Ein Koffer ist rot und ein Koffer ist blau.", en: "One suitcase is red and one suitcase is blue." },
-      { de: "Die Personen schauen auf den Zug und lächeln.", en: "The people look at the train and smile." },
-      { de: "Ich glaube, die Familie fährt mit dem Zug nach Frankfurt.", en: "I think the family is traveling by train to Frankfurt." },
-      { de: "Vielleicht besuchen sie ihre Verwandten.", en: "Maybe they are visiting their relatives." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich einen Bahnhof.",
+            "en": "In the picture I see a train station."
+      },
+      {
+            "de": "Am Gleis steht ein roter Zug.",
+            "en": "At the track stands a red train."
+      },
+      {
+            "de": "Auf dem Bahnsteig steht eine Familie.",
+            "en": "On the platform stands a family."
+      },
+      {
+            "de": "Sie haben Koffer dabei.",
+            "en": "They have suitcases with them."
+      },
+      {
+            "de": "Ein Koffer ist rot und ein Koffer ist blau.",
+            "en": "One suitcase is red and one suitcase is blue."
+      },
+      {
+            "de": "Die Personen warten auf den Zug.",
+            "en": "The people are waiting for the train."
+      },
+      {
+            "de": "Der Zug fährt nach Frankfurt.",
+            "en": "The train goes to Frankfurt."
+      },
+      {
+            "de": "Ich glaube, die Familie macht eine Reise.",
+            "en": "I think the family is going on a trip."
+      }
+],
     situation: [
-      { de: 'Wo steht die Familie?', en: 'Where is the family standing?' },
-      { de: '→ Die Familie steht auf dem Bahnsteig am Bahnhof.', en: '→ The family is standing on the platform at the train station.', isAnswer: true },
-      { de: 'Welche Farbe hat der Zug?', en: 'What color is the train?' },
-      { de: '→ Der Zug ist rot.', en: '→ The train is red.', isAnswer: true },
-      { de: 'Wohin fährt der Zug?', en: 'Where is the train going?' },
-      { de: '→ Der Zug fährt nach Frankfurt Hauptbahnhof.', en: '→ The train is going to Frankfurt central station.', isAnswer: true },
-      { de: 'An welchem Gleis steht der Zug?', en: 'At which platform is the train standing?' },
-      { de: '→ Der Zug steht an Gleis 7.', en: '→ The train is standing at platform 7.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich einen Bahnhof, einen roten Zug und eine Familie.",
+            "en": "→ In the picture I see a train station, a red train, and a family.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind am Bahnhof auf dem Bahnsteig.",
+            "en": "→ They are at the train station on the platform.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie haben Koffer und warten auf den Zug.",
+            "en": "→ They have suitcases and are waiting for the train.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'der Bahnhof', en: 'the train station' },
       { de: 'der Zug / die Bahn', en: 'the train' },
@@ -673,26 +1085,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Shirt',
     image: img2,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich einen Mann und eine Frau.", en: "In the picture I see a man and a woman." },
-      { de: "Sie sind in einem Bekleidungsgeschäft.", en: "They are in a clothing store." },
-      { de: "Die Frau trägt einen gelben Pullover.", en: "The woman is wearing a yellow sweater." },
-      { de: "Sie hält eine grüne Jacke auf einem Kleiderbügel.", en: "She is holding a green jacket on a clothes hanger." },
-      { de: "Links steht der Mann mit einem blauen Hemd.", en: "On the left stands the man with a blue shirt." },
-      { de: "Er schaut die Jacke an und spricht mit der Frau.", en: "He looks at the jacket and talks with the woman." },
-      { de: "Im Hintergrund hängen viele Hosen und Hemden.", en: "In the background hang many trousers and shirts." },
-      { de: "Die beiden Personen lächeln und wirken sehr sympathisch.", en: "Both people smile and seem very pleasant." },
-      { de: "Ich glaube, die Frau möchte die grüne Jacke anprobieren und kaufen.", en: "I think the woman wants to try on and buy the green jacket." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich einen Mann und eine Frau.",
+            "en": "In the picture I see a man and a woman."
+      },
+      {
+            "de": "Sie sind in einem Geschäft für Kleidung.",
+            "en": "They are in a clothing store."
+      },
+      {
+            "de": "Links steht ein Mann mit einem blauen Hemd.",
+            "en": "On the left stands a man with a blue shirt."
+      },
+      {
+            "de": "Rechts steht eine Frau mit einem gelben Pullover.",
+            "en": "On the right stands a woman with a yellow sweater."
+      },
+      {
+            "de": "Die Frau hat eine grüne Jacke in der Hand.",
+            "en": "The woman has a green jacket in her hand."
+      },
+      {
+            "de": "Sie sprechen und lachen.",
+            "en": "They are talking and laughing."
+      },
+      {
+            "de": "Im Hintergrund hängen viele Kleider.",
+            "en": "In the background hang many clothes."
+      },
+      {
+            "de": "Ich glaube, die Frau möchte die Jacke kaufen.",
+            "en": "I think the woman wants to buy the jacket."
+      }
+],
     situation: [
-      { de: 'Wo sind der Mann und die Frau?', en: 'Where are the man and the woman?' },
-      { de: '→ Sie sind in einem Modegeschäft.', en: '→ They are in a clothing store.', isAnswer: true },
-      { de: 'Was sucht die Frau aus?', en: 'What is the woman picking out?' },
-      { de: '→ Sie sucht eine grüne Jacke aus.', en: '→ She is picking out a green jacket.', isAnswer: true },
-      { de: 'Welche Farbe hat der Pullover von der Frau?', en: "What color is the woman's sweater?" },
-      { de: '→ Ihr Pullover ist gelb.', en: '→ Her sweater is yellow.', isAnswer: true },
-      { de: 'Was sieht man im Hintergrund?', en: 'What do you see in the background?' },
-      { de: '→ Man sieht viele andere Kleider an Regalen.', en: '→ You see many other clothes on racks.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich einen Mann, eine Frau und Kleidung.",
+            "en": "→ In the picture I see a man, a woman, and clothes.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind die Personen?",
+            "en": "Where are the people?"
+      },
+      {
+            "de": "→ Sie sind in einem Bekleidungsgeschäft.",
+            "en": "→ They are in a clothing store.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen die Personen?",
+            "en": "What are the people doing?"
+      },
+      {
+            "de": "→ Sie sprechen und lachen. Die Frau kauft Kleidung.",
+            "en": "→ They are talking and laughing. The woman is buying clothes.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'das Bekleidungsgeschäft / der Modeladen', en: 'the clothing store' },
       { de: 'die Kleidung', en: 'the clothes' },
@@ -712,26 +1166,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Sofa',
     image: img1,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich drei Personen in einem Möbelgeschäft.", en: "In the picture I see three people in a furniture store." },
-      { de: "Rechts steht eine Verkäuferin mit einem grünen T-Shirt.", en: "On the right stands a saleswoman with a green t-shirt." },
-      { de: "Sie hält ein Tablet in der Hand und berät die Kunden.", en: "She holds a tablet in her hand and advises the customers." },
-      { de: "Links stehen ein Mann und eine Frau.", en: "On the left stand a man and a woman." },
-      { de: "Der Mann trägt ein dunkles Sakko und die Frau einen hellen Mantel.", en: "The man is wearing a dark jacket and the woman a light coat." },
-      { de: "In der Mitte steht ein gemütliches, graues Sofa.", en: "In the middle stands a cozy, gray sofa." },
-      { de: "Im Hintergrund sehe ich einen Holztisch, Stühle und Lampen.", en: "In the background I see a wooden table, chairs, and lamps." },
-      { de: "Die Kunden hören der Verkäuferin aufmerksam zu.", en: "The customers listen attentively to the saleswoman." },
-      { de: "Ich glaube, das Paar möchte ein neues Sofa für ihr Wohnzimmer kaufen.", en: "I think the couple wants to buy a new sofa for their living room." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich ein Möbelgeschäft.",
+            "en": "In the picture I see a furniture store."
+      },
+      {
+            "de": "Ich sehe drei Personen: einen Mann und zwei Frauen.",
+            "en": "I see three people: a man and two women."
+      },
+      {
+            "de": "In der Mitte steht ein graues Sofa.",
+            "en": "In the middle stands a gray sofa."
+      },
+      {
+            "de": "Rechts steht eine Verkäuferin. Sie arbeitet hier.",
+            "en": "On the right stands a saleswoman. She works here."
+      },
+      {
+            "de": "Links stehen ein Mann und eine Frau.",
+            "en": "On the left stand a man and a woman."
+      },
+      {
+            "de": "Sie sprechen über das Sofa.",
+            "en": "They are talking about the sofa."
+      },
+      {
+            "de": "Im Hintergrund sehe ich einen Tisch und Stühle.",
+            "en": "In the background I see a table and chairs."
+      },
+      {
+            "de": "Ich glaube, sie möchten ein Sofa kaufen.",
+            "en": "I think they want to buy a sofa."
+      }
+],
     situation: [
-      { de: 'Wo sind die Personen?', en: 'Where are the people?' },
-      { de: '→ Sie sind in einem Möbelgeschäft.', en: '→ They are in a furniture store.', isAnswer: true },
-      { de: 'Was macht die Verkäuferin?', en: 'What is the saleswoman doing?' },
-      { de: '→ Sie berät das Paar und zeigt auf ein Sofa.', en: '→ She is advising the couple and pointing to a sofa.', isAnswer: true },
-      { de: 'Was hat die Verkäuferin in der Hand?', en: 'What does the saleswoman have in her hand?' },
-      { de: '→ Sie hat ein Tablet in der Hand.', en: '→ She has a tablet in her hand.', isAnswer: true },
-      { de: 'Welche Möbel sieht man auf dem Bild?', en: 'Which furniture do you see in the picture?' },
-      { de: '→ Man sieht ein Sofa, einen Tisch, Stühle und Schränke.', en: '→ You see a sofa, a table, chairs, and cupboards.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich drei Personen und ein Sofa.",
+            "en": "→ In the picture I see three people and a sofa.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind die Personen?",
+            "en": "Where are the people?"
+      },
+      {
+            "de": "→ Sie sind in einem Möbelgeschäft.",
+            "en": "→ They are in a furniture store.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen die Personen?",
+            "en": "What are the people doing?"
+      },
+      {
+            "de": "→ Sie sprechen über das Sofa. Die Kunden möchten einkaufen.",
+            "en": "→ They are talking about the sofa. The customers want to shop.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'das Möbelgeschäft / das Möbelhaus', en: 'the furniture store' },
       { de: 'die Möbel', en: 'the furniture' },
@@ -751,26 +1247,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Car',
     image: img3,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich zwei Frauen vor einem Haus.", en: "In the picture I see two women in front of a house." },
-      { de: "Die ältere Frau ist die Mutter und die jüngere ist ihre Tochter.", en: "The older woman is the mother and the younger is her daughter." },
-      { de: "Im Hintergrund steht ein großes, glänzendes, rotes Auto.", en: "In the background stands a big, shiny, red car." },
-      { de: "Die Mutter trägt eine blaue Jacke.", en: "The mother is wearing a blue jacket." },
-      { de: "Die Tochter trägt einen grünen Pullover.", en: "The daughter is wearing a green sweater." },
-      { de: "Die Mutter gibt ihrer Tochter einen Autoschlüssel.", en: "The mother gives her daughter a car key." },
-      { de: "Das junge Mädchen lacht und freut sich riesig.", en: "The young girl laughs and is extremely happy." },
-      { de: "Ich glaube, das rote Auto ist ein Überraschungsgeschenk für die Tochter.", en: "I think the red car is a surprise gift for the daughter." },
-      { de: "Vielleicht hat sie gerade ihren Führerschein bestanden.", en: "Maybe she just passed her driving test." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich zwei Frauen vor einem Haus.",
+            "en": "In the picture I see two women in front of a house."
+      },
+      {
+            "de": "Das sind eine Mutter und ihre Tochter.",
+            "en": "Those are a mother and her daughter."
+      },
+      {
+            "de": "Im Hintergrund steht ein rotes Auto.",
+            "en": "In the background stands a red car."
+      },
+      {
+            "de": "Links steht die Mutter mit einer blauen Jacke.",
+            "en": "On the left stands the mother with a blue jacket."
+      },
+      {
+            "de": "Rechts steht die Tochter mit einem grünen Pullover.",
+            "en": "On the right stands the daughter with a green sweater."
+      },
+      {
+            "de": "Die Mutter gibt der Tochter einen Autoschlüssel.",
+            "en": "The mother gives the daughter a car key."
+      },
+      {
+            "de": "Sie lachen und freuen sich.",
+            "en": "They are laughing and happy."
+      },
+      {
+            "de": "Ich glaube, das rote Auto ist ein Geschenk.",
+            "en": "I think the red car is a gift."
+      }
+],
     situation: [
-      { de: 'Wer ist auf dem Bild?', en: 'Who is in the picture?' },
-      { de: '→ Auf dem Bild sind eine Mutter und ihre Tochter.', en: '→ In the picture are a mother and her daughter.', isAnswer: true },
-      { de: 'Welche Farbe hat das Auto?', en: 'What color is the car?' },
-      { de: '→ Das Auto ist rot.', en: '→ The car is red.', isAnswer: true },
-      { de: 'Was gibt die Mutter der Tochter?', en: 'What is the mother giving the daughter?' },
-      { de: '→ Sie gibt ihr einen Autoschlüssel.', en: '→ She is giving her a car key.', isAnswer: true },
-      { de: 'Wie fühlt sich das Mädchen?', en: 'How does the girl feel?' },
-      { de: '→ Sie ist sehr glücklich und überrascht.', en: '→ She is very happy and surprised.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich eine Mutter, ihre Tochter und ein rotes Auto.",
+            "en": "→ In the picture I see a mother, her daughter, and a red car.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie stehen vor einem Haus.",
+            "en": "→ They are standing in front of a house.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Die Mutter gibt der Tochter einen Schlüssel. Sie freuen sich.",
+            "en": "→ The mother gives the daughter a key. They are happy.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'das Auto', en: 'the car' },
       { de: 'die Mutter', en: 'the mother' },
@@ -790,26 +1328,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Mountain',
     image: img4,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich zwei Frauen in den Bergen.", en: "In the picture I see two women in the mountains." },
-      { de: "Sie machen eine Wanderung in der Natur.", en: "They are going on a hike in nature." },
-      { de: "Im Hintergrund sehe ich hohe Berge mit weißem Schnee.", en: "In the background I see high mountains with white snow." },
-      { de: "Der Himmel ist blau und die Sonne scheint.", en: "The sky is blue and the sun is shining." },
-      { de: "Die linke Frau trägt eine rote Jacke und eine rote Mütze.", en: "The left woman wears a red jacket and a red beanie." },
-      { de: "Die rechte Frau trägt eine blaue Jacke und eine blaue Mütze.", en: "The right woman wears a blue jacket and a blue beanie." },
-      { de: "Beide Frauen tragen große Wanderrucksäcke.", en: "Both women carry big hiking backpacks." },
-      { de: "Sie gehen auf einem Wanderweg, sprechen und lächeln.", en: "They are walking on a hiking path, talking, and smiling." },
-      { de: "Ich glaube, sie genießen das schöne Wetter in den Alpen.", en: "I think they are enjoying the nice weather in the Alps." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich zwei Frauen in den Bergen.",
+            "en": "In the picture I see two women in the mountains."
+      },
+      {
+            "de": "Sie sind draußen in der Natur.",
+            "en": "They are outside in nature."
+      },
+      {
+            "de": "Links sehe ich eine Frau mit einer roten Jacke.",
+            "en": "On the left I see a woman with a red jacket."
+      },
+      {
+            "de": "Rechts sehe ich eine Frau mit einer blauen Jacke.",
+            "en": "On the right I see a woman with a blue jacket."
+      },
+      {
+            "de": "Beide Frauen tragen einen Rucksack.",
+            "en": "Both women carry a backpack."
+      },
+      {
+            "de": "Im Hintergrund sehe ich Berge mit Schnee.",
+            "en": "In the background I see mountains with snow."
+      },
+      {
+            "de": "Sie gehen und sprechen zusammen.",
+            "en": "They are walking and talking together."
+      },
+      {
+            "de": "Ich glaube, das Wetter ist sehr schön.",
+            "en": "I think the weather is very nice."
+      }
+],
     situation: [
-      { de: 'Was machen die Frauen?', en: 'What are the women doing?' },
-      { de: '→ Sie machen eine Wanderung in den Bergen.', en: '→ They are doing a hike in the mountains.', isAnswer: true },
-      { de: 'Was tragen die Frauen auf dem Rücken?', en: 'What are the women wearing on their backs?' },
-      { de: '→ Sie tragen große Rucksäcke.', en: '→ They are wearing big backpacks.', isAnswer: true },
-      { de: 'Wie ist das Wetter auf dem Bild?', en: 'How is the weather in the picture?' },
-      { de: '→ Das Wetter ist schön und sonnig, aber es ist kalt in den Bergen.', en: '→ The weather is beautiful and sunny, but it is cold in the mountains.', isAnswer: true },
-      { de: 'Was sieht man im Hintergrund?', en: 'What do you see in the background?' },
-      { de: '→ Im Hintergrund sieht man hohe Berge mit weißem Schnee.', en: '→ In the background, you see high mountains with white snow.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich zwei Frauen in den Bergen.",
+            "en": "→ In the picture I see two women in the mountains.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind in den Bergen in der Natur.",
+            "en": "→ They are in the mountains in nature.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie wandern und tragen Rucksäcke.",
+            "en": "→ They are hiking and carrying backpacks.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'wandern', en: 'to hike' },
       { de: 'die Berge', en: 'the mountains' },
@@ -830,25 +1410,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'ShoppingBag',
     image: img7,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich zwei Freundinnen in einer Modeboutique.", en: "In the picture I see two female friends in a fashion boutique." },
-      { de: "Sie schauen sich Kleidung an und gehen shoppen.", en: "They are looking at clothes and shopping." },
-      { de: "Die linke Frau trägt einen hellen Pullover.", en: "The left woman is wearing a light-colored sweater." },
-      { de: "Sie hält ein wunderschönes blaues Kleid mit Blumen.", en: "She is holding a wonderful blue dress with flowers." },
-      { de: "Die rechte Frau trägt eine modische Jeansjacke.", en: "The right woman is wearing a fashionable denim jacket." },
-      { de: "Beide Frauen lachen laut und haben viel Freude.", en: "Both women laugh out loud and have a lot of fun." },
-      { de: "Im Hintergrund sieht man viele Taschen und Kleiderständer.", en: "In the background you can see many bags and clothes racks." },
-      { de: "Ich glaube, die Frau möchte das blaue Kleid für eine Party kaufen.", en: "I think the woman wants to buy the blue dress for a party." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich zwei Frauen in einem Geschäft.",
+            "en": "In the picture I see two women in a shop."
+      },
+      {
+            "de": "Sie schauen Kleidung an.",
+            "en": "They are looking at clothes."
+      },
+      {
+            "de": "Links sehe ich eine Frau mit einem hellen Pullover.",
+            "en": "On the left I see a woman with a light sweater."
+      },
+      {
+            "de": "Sie hält ein blaues Kleid in der Hand.",
+            "en": "She holds a blue dress in her hand."
+      },
+      {
+            "de": "Rechts sehe ich eine Frau mit einer Jacke.",
+            "en": "On the right I see a woman with a jacket."
+      },
+      {
+            "de": "Sie lachen und sprechen zusammen.",
+            "en": "They are laughing and talking together."
+      },
+      {
+            "de": "Im Hintergrund sehe ich viele Kleider.",
+            "en": "In the background I see many clothes."
+      },
+      {
+            "de": "Ich glaube, die Frau möchte das blaue Kleid kaufen.",
+            "en": "I think the woman wants to buy the blue dress."
+      }
+],
     situation: [
-      { de: 'Was machen die zwei Frauen?', en: 'What are the two women doing?' },
-      { de: '→ Sie gehen zusammen shoppen und kaufen Kleidung.', en: '→ They are going shopping together and buying clothes.', isAnswer: true },
-      { de: 'Was zeigt die eine Frau ihrer Freundin?', en: 'What is the one woman showing her friend?' },
-      { de: '→ Sie zeigt ihr ein blaues Kleid.', en: '→ She is showing her a blue dress.', isAnswer: true },
-      { de: 'Wie ist die Stimmung im Geschäft?', en: 'How is the mood in the store?' },
-      { de: '→ Die Stimmung ist super. Die Freundinnen lachen und sind fröhlich.', en: '→ The mood is great. The friends are laughing and cheerful.', isAnswer: true },
-      { de: 'Was sieht man im Hintergrund?', en: 'What do you see in the background?' },
-      { de: '→ Im Hintergrund sieht man viele Kleider an Regalen und Taschen.', en: '→ In the background, you see many clothes on racks and bags.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich zwei Frauen und ein blaues Kleid.",
+            "en": "→ In the picture I see two women and a blue dress.",
+            "isAnswer": true
+      },
+      {
+            "de": "Wo sind diese Personen?",
+            "en": "Where are these people?"
+      },
+      {
+            "de": "→ Sie sind in einem Modegeschäft.",
+            "en": "→ They are in a fashion store.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen diese Personen?",
+            "en": "What are these people doing?"
+      },
+      {
+            "de": "→ Sie sprechen, lachen und kaufen Kleidung.",
+            "en": "→ They are talking, laughing, and buying clothes.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'die Freundinnen', en: 'the friends (female)' },
       { de: 'das Bekleidungsgeschäft / der Modeladen', en: 'the clothing store' },
@@ -868,26 +1491,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Home',
     image: img11,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich ein helles, modernes Wohnzimmer.", en: "In the picture I see a bright, modern living room." },
-      { de: "In der Mitte ist ein großes Fenster mit Blick auf Bäume.", en: "In the middle is a large window with a view of trees." },
-      { de: "Links steht ein gemütliches, graues Sofa mit Kissen.", en: "On the left stands a cozy, gray sofa with cushions." },
-      { de: "Auf dem Sofa liegt auch eine weiche Decke.", en: "On the sofa also lies a soft blanket." },
-      { de: "Vor dem Sofa steht ein kleiner, runder Holztisch.", en: "In front of the sofa stands a small, round wooden table." },
-      { de: "Rechts sehe ich ein weißes Regal mit vielen Büchern.", en: "On the right I see a white shelf with many books." },
-      { de: "Auf einem Hocker steht eine schöne grüne Zimmerpflanze.", en: "On a stool stands a nice green houseplant." },
-      { de: "Der Raum ist sehr sauber, ordentlich und gemütlich.", en: "The room is very clean, tidy, and cozy." },
-      { de: "Ich glaube, hier kann man sich wunderbar entspannen und lesen.", en: "I think here you can wonderfully relax and read." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich ein helles Wohnzimmer.",
+            "en": "In the picture I see a bright living room."
+      },
+      {
+            "de": "In der Mitte sehe ich ein großes Fenster.",
+            "en": "In the middle I see a big window."
+      },
+      {
+            "de": "Links steht ein graues Sofa mit Kissen.",
+            "en": "On the left stands a gray sofa with pillows."
+      },
+      {
+            "de": "Vor dem Sofa steht ein kleiner Tisch.",
+            "en": "In front of the sofa stands a small table."
+      },
+      {
+            "de": "Rechts sehe ich ein weißes Regal mit Büchern.",
+            "en": "On the right I see a white shelf with books."
+      },
+      {
+            "de": "Auf einem Hocker steht eine grüne Pflanze.",
+            "en": "On a stool stands a green plant."
+      },
+      {
+            "de": "Das Zimmer ist sauber und schön.",
+            "en": "The room is clean and nice."
+      },
+      {
+            "de": "Ich glaube, das Wohnzimmer ist sehr gemütlich.",
+            "en": "I think the living room is very cozy."
+      }
+],
     situation: [
-      { de: 'Welches Zimmer sieht man auf dem Bild?', en: 'Which room do you see in the picture?' },
-      { de: '→ Man sieht ein Wohnzimmer.', en: '→ You see a living room.', isAnswer: true },
-      { de: 'Was steht in der Mitte vor dem Sofa?', en: 'What stands in the middle in front of the sofa?' },
-      { de: '→ Vor dem Sofa steht ein kleiner, runder Holztisch.', en: '→ In front of the sofa stands a small, round wooden table.', isAnswer: true },
-      { de: 'Wo stehen die Bücher?', en: 'Where are the books?' },
-      { de: '→ Die Bücher stehen in einem weißen Regal auf der rechten Seite.', en: '→ The books are in a white shelf on the right side.', isAnswer: true },
-      { de: 'Was sieht man durch das große Fenster?', en: 'What do you see through the large window?' },
-      { de: '→ Man sieht den Hintergrund mit Bäumen und anderen Häusern.', en: '→ You see the background with trees and other houses.', isAnswer: true }
-    ],
+      {
+            "de": "Welches Zimmer sehen Sie?",
+            "en": "Which room do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich ein Wohnzimmer.",
+            "en": "→ In the picture I see a living room.",
+            "isAnswer": true
+      },
+      {
+            "de": "Welche Möbel stehen im Zimmer?",
+            "en": "Which furniture is in the room?"
+      },
+      {
+            "de": "→ Im Zimmer stehen ein Sofa, ein Tisch und ein Regal.",
+            "en": "→ In the room are a sofa, a table, and a shelf.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was steht im Regal?",
+            "en": "What is on the shelf?"
+      },
+      {
+            "de": "→ Im Regal stehen viele Bücher.",
+            "en": "→ On the shelf are many books.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'das Wohnzimmer', en: 'the living room' },
       { de: 'gemütlich', en: 'cozy' },
@@ -907,26 +1572,68 @@ export const sprechenTopics: Topic[] = [
     icon: 'Briefcase',
     image: img12,
     bildbeschreibung: [
-      { de: "Auf dem Bild sehe ich Studenten in einer Bibliothek oder Universität.", en: "In the picture I see students in a library or university." },
-      { de: "Im Vordergrund sitzt eine junge Frau an einem Holztisch.", en: "In the foreground sits a young woman at a wooden table." },
-      { de: "Sie hat eine Brille und schöne, lockige Haare.", en: "She has glasses and beautiful, curly hair." },
-      { de: "Sie tippt konzentriert auf ihrem Laptop.", en: "She types concentrated on her laptop." },
-      { de: "Auf dem Tisch stehen eine Kaffeetasse, eine Wasserflasche und Stifte.", en: "On the table are a coffee cup, a water bottle, and pencils." },
-      { de: "Im Hintergrund stehen vier andere Studenten am Fenster.", en: "In the background four other students are standing by the window." },
-      { de: "Sie machen eine Pause, trinken Kaffee, sprechen und lachen.", en: "They are taking a break, drinking coffee, talking, and laughing." },
-      { de: "An der Wand stehen große Regale mit vielen Büchern.", en: "On the wall are large shelves with many books." },
-      { de: "Ich glaube, die Studenten bereiten sich auf eine Prüfung vor.", en: "I think the students are preparing for an exam." }
-    ],
+      {
+            "de": "Auf dem Bild sehe ich eine Bibliothek.",
+            "en": "In the picture I see a library."
+      },
+      {
+            "de": "Vorne sitzt eine junge Frau an einem Tisch.",
+            "en": "In front sits a young woman at a table."
+      },
+      {
+            "de": "Sie trägt eine Brille.",
+            "en": "She wears glasses."
+      },
+      {
+            "de": "Sie arbeitet an einem Laptop.",
+            "en": "She works on a laptop."
+      },
+      {
+            "de": "Auf dem Tisch stehen eine Tasse und eine Flasche.",
+            "en": "On the table are a cup and a bottle."
+      },
+      {
+            "de": "Im Hintergrund stehen vier Personen am Fenster.",
+            "en": "In the background four people stand by the window."
+      },
+      {
+            "de": "An der Wand sehe ich Regale mit vielen Büchern.",
+            "en": "On the wall I see shelves with many books."
+      },
+      {
+            "de": "Ich glaube, sie lernen für eine Prüfung.",
+            "en": "I think they are studying for an exam."
+      }
+],
     situation: [
-      { de: 'Was macht die Frau im Vordergrund?', en: 'What is the woman in the foreground doing?' },
-      { de: '→ Sie sitzt am Tisch und arbeitet oder lernt mit ihrem Laptop.', en: '→ She is sitting at the table and working or studying with her laptop.', isAnswer: true },
-      { de: 'Was machen die Studenten im Hintergrund?', en: 'What are the students in the background doing?' },
-      { de: '→ Sie stehen am Fenster, machen eine Pause, sprechen und lachen.', en: '→ They are standing by the window, taking a break, talking, and laughing.', isAnswer: true },
-      { de: 'Was steht alles auf dem Schreibtisch?', en: 'What is everything on the desk?' },
-      { de: '→ Auf dem Schreibtisch stehen ein Laptop, eine Tasse, eine Flasche und Stifte.', en: '→ On the desk, there are a laptop, a cup, a bottle, and pencils.', isAnswer: true },
-      { de: 'Wo sind die Personen wahrscheinlich?', en: 'Where are the people most likely?' },
-      { de: '→ Sie sind in der Universität, in der Schule oder in einer Bibliothek.', en: '→ They are at the university, in school, or in a library.', isAnswer: true }
-    ],
+      {
+            "de": "Was sehen Sie?",
+            "en": "What do you see?"
+      },
+      {
+            "de": "→ Auf dem Bild sehe ich eine Frau am Tisch in einer Bibliothek.",
+            "en": "→ In the picture I see a woman at a table in a library.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was macht die Frau?",
+            "en": "What is the woman doing?"
+      },
+      {
+            "de": "→ Sie sitzt am Tisch und lernt an ihrem Laptop.",
+            "en": "→ She sits at the table and studies on her laptop.",
+            "isAnswer": true
+      },
+      {
+            "de": "Was machen die Personen im Hintergrund?",
+            "en": "What are the people in the background doing?"
+      },
+      {
+            "de": "→ Sie stehen am Fenster, sprechen und trinken Kaffee.",
+            "en": "→ They are standing by the window, talking, and drinking coffee.",
+            "isAnswer": true
+      }
+],
     vocabulary: [
       { de: 'die Universität / die Uni', en: 'the university' },
       { de: 'der Student / die Studentin', en: 'the student' },
