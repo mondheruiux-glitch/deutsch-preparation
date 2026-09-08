@@ -6,7 +6,7 @@ import { AuthLayout } from '../components/auth/AuthLayout';
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
-  const { user, signInWithPassword, signInWithOAuth, isConfigured } = useAuth();
+  const { user, signInWithPassword, signInWithOAuth, isConfigured, isSecretKeyConfigured } = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,6 +23,10 @@ export const LoginPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSecretKeyConfigured) {
+      setErrorMsg('Geheimer Schlüssel (sb_secret_...) in .env gefunden. Bitte durch den öffentlichen Anon-Schlüssel ersetzen.');
+      return;
+    }
     if (!email.trim() || !password) {
       setErrorMsg('Bitte geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein.');
       return;
@@ -56,6 +60,10 @@ export const LoginPage: React.FC = () => {
   };
 
   const handleGoogleSignIn = async () => {
+    if (isSecretKeyConfigured) {
+      setErrorMsg('Geheimer Schlüssel (sb_secret_...) erkannt. Bitte ersetzen Sie ihn in .env durch den öffentlichen Anon-Schlüssel.');
+      return;
+    }
     if (!isConfigured) {
       setErrorMsg('Supabase ist noch nicht konfiguriert. Bitte tragen Sie Ihren anon key in .env ein.');
       return;
@@ -76,7 +84,15 @@ export const LoginPage: React.FC = () => {
       title="Willkommen zurück"
       subtitle="Melden Sie sich an, um Ihren Lernfortschritt zu speichern"
     >
-      {!isConfigured && (
+      {isSecretKeyConfigured ? (
+        <div className="mb-5 p-3.5 bg-red-50 border border-red-200 rounded-2xl flex items-start gap-2.5 text-red-800 text-xs leading-relaxed">
+          <AlertCircle size={16} className="shrink-0 mt-0.5 text-red-600" />
+          <div>
+            <strong className="font-semibold block mb-0.5 text-red-900">Geheimer Supabase Schlüssel erkannt!</strong>
+            In Ihrer <code className="bg-red-100 px-1 py-0.5 rounded font-mono text-red-900">.env</code> ist ein geheimer Schlüssel (<code className="bg-red-100 px-1 py-0.5 rounded font-mono text-red-900">sb_secret_...</code>) eingetragen. Im Browser darf nur der <strong>öffentliche Anon Key</strong> (<code className="bg-red-100 px-1 py-0.5 rounded font-mono text-red-900">anon public</code> / <code className="bg-red-100 px-1 py-0.5 rounded font-mono text-red-900">sb_publishable_...</code>) verwendet werden.
+          </div>
+        </div>
+      ) : !isConfigured ? (
         <div className="mb-5 p-3.5 bg-amber-50 border border-amber-200 rounded-2xl flex items-start gap-2.5 text-amber-800 text-xs leading-relaxed">
           <AlertCircle size={16} className="shrink-0 mt-0.5 text-amber-600" />
           <div>
@@ -84,7 +100,7 @@ export const LoginPage: React.FC = () => {
             Bitte tragen Sie Ihren <code className="bg-amber-100 px-1 py-0.5 rounded font-mono">VITE_SUPABASE_ANON_KEY</code> in der Datei <code className="bg-amber-100 px-1 py-0.5 rounded font-mono">.env</code> ein.
           </div>
         </div>
-      )}
+      ) : null}
 
       {errorMsg && (
         <div className="mb-5 p-3.5 bg-red-50 border border-red-200 rounded-2xl flex items-start gap-2.5 text-red-700 text-xs">

@@ -21,6 +21,7 @@ import img19 from '../assets/images/topic19_fernsehen.png';
 import img20 from '../assets/images/topic20_reinigung.png';
 import img21 from '../assets/images/topic21_umzug.png';
 import img22 from '../assets/images/topic22_grillen.png';
+import img23 from '../assets/images/topic23_restaurant.jpg';
 import img0 from '../assets/images/topic0_wortschatz.jpg';
 
 export interface TopicPair {
@@ -676,6 +677,46 @@ export const sprechenTopics: Topic[] = [
       { de: "der Teller", en: "the plate" },
       { de: "die Grillparty", en: "the barbecue party" },
       { de: "das Wetter", en: "the weather" }
+    ]
+  },
+  {
+    id: '23',
+    title: 'Im Restaurant — At the Restaurant',
+    icon: 'Utensils',
+    image: img23,
+    bildbeschreibung: [
+      { de: "Auf dem Bild sehe ich ein Restaurant.", en: "In the picture I see a restaurant." },
+      { de: "Auf dem Bild sehe ich eine Kellnerin, zwei Gäste, eine Speisekarte, zwei Teller Salat und zwei Gläser Bier.", en: "In the picture I see a waitress, two guests, a menu, two plates of salad, and two glasses of beer." },
+      { de: "Ich sehe drei Personen.", en: "I see three people." },
+      { de: "Sie sind im Restaurant.", en: "They are in a restaurant." },
+      { de: "Die zwei Gäste sitzen am Tisch.", en: "The two guests are sitting at the table." },
+      { de: "Die Kellnerin steht am Tisch und spricht mit den Gästen.", en: "The waitress is standing at the table and speaking with the guests." },
+      { de: "Ich glaube, die Gäste möchten etwas zu essen bestellen.", en: "I think the guests want to order something to eat." },
+      { de: "Die Atmosphäre ist sehr angenehm.", en: "The atmosphere is very pleasant." }
+    ],
+    situation: [
+      { de: "Was sehen Sie?", en: "What do you see?" },
+      { de: "→ Auf dem Bild sehe ich eine Kellnerin, zwei Gäste, eine Speisekarte, zwei Teller Salat und zwei Gläser Bier.", en: "→ In the picture I see a waitress, two guests, a menu, two plates of salad, and two glasses of beer.", isAnswer: true },
+      { de: "Wie viele Personen sehen Sie?", en: "How many people do you see?" },
+      { de: "→ Ich sehe drei Personen.", en: "→ I see three people.", isAnswer: true },
+      { de: "Wo sind diese Personen?", en: "Where are these people?" },
+      { de: "→ Sie sind im Restaurant.", en: "→ They are in a restaurant.", isAnswer: true },
+      { de: "Was machen diese Personen?", en: "What are these people doing?" },
+      { de: "→ Ich glaube, die Gäste möchten etwas zu essen bestellen.", en: "→ I think the guests want to order something to eat.", isAnswer: true }
+    ],
+    vocabulary: [
+      { de: "das Restaurant", en: "the restaurant" },
+      { de: "die Kellnerin", en: "the waitress" },
+      { de: "der Kellner", en: "the waiter" },
+      { de: "der Gast (Plural: die Gäste)", en: "the guest (guests)" },
+      { de: "die Speisekarte", en: "the menu" },
+      { de: "der Salat", en: "the salad" },
+      { de: "das Glas Bier", en: "the glass of beer" },
+      { de: "der Tisch", en: "the table" },
+      { de: "bestellen", en: "to order" },
+      { de: "essen", en: "to eat" },
+      { de: "trinken", en: "to drink" },
+      { de: "bezahlen", en: "to pay" }
     ]
   },
 

@@ -5,11 +5,24 @@ import { Browser } from '@capacitor/browser';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://fhgqinnfoothziltwivl.supabase.co';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
-export const isConfigured = Boolean(
-  supabaseAnonKey && supabaseAnonKey !== 'your-supabase-anon-key-here'
+// Detect if a secret key (service_role or sb_secret_...) was mistakenly used
+export const isSecretKeyConfigured = Boolean(
+  supabaseAnonKey && (
+    supabaseAnonKey.startsWith('sb_secret_') || 
+    supabaseAnonKey.startsWith('service_role')
+  )
 );
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey || 'dummy-anon-key', {
+export const isConfigured = Boolean(
+  supabaseAnonKey && 
+  supabaseAnonKey !== 'your-supabase-anon-key-here' &&
+  !isSecretKeyConfigured
+);
+
+// Never pass a secret key to the browser client - it causes "Forbidden use of secret API key in browser"
+const safeKey = (!isSecretKeyConfigured && supabaseAnonKey) ? supabaseAnonKey : 'dummy-anon-key';
+
+export const supabase = createClient(supabaseUrl, safeKey, {
   auth: {
     persistSession: true,
     autoRefreshToken: true,

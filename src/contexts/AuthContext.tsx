@@ -1,12 +1,13 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, Session, AuthError } from '@supabase/supabase-js';
-import { supabase, isConfigured, signInWithProvider } from '../lib/supabase';
+import { supabase, isConfigured, isSecretKeyConfigured, signInWithProvider } from '../lib/supabase';
 
 interface AuthContextType {
   user: User | null;
   session: Session | null;
   loading: boolean;
   isConfigured: boolean;
+  isSecretKeyConfigured: boolean;
   signInWithPassword: (email: string, password: string) => Promise<{ error: AuthError | null }>;
   signUp: (email: string, password: string, fullName?: string) => Promise<{ error: AuthError | null; user: User | null }>;
   signInWithOAuth: (provider: 'google' | 'apple') => Promise<void>;
@@ -95,6 +96,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         session,
         loading,
         isConfigured,
+        isSecretKeyConfigured,
         signInWithPassword,
         signUp,
         signInWithOAuth,
