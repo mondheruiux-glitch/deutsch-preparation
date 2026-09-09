@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { playGermanAudio } from '../utils/audio';
 import { SchreibenTipsModal } from './SchreibenTipsModal';
+import { FavoriteButton } from './FavoriteButton';
 
 interface SchreibenThemeDetailProps {
   theme: SchreibenTheme;
@@ -53,6 +54,15 @@ export function SchreibenThemeDetail({ theme, onBack }: SchreibenThemeDetailProp
           <span>Zurück zur Themenliste</span>
         </button>
         <div className="flex items-center gap-2">
+          <FavoriteButton
+            item={{
+              id: theme.id,
+              section: 'schreiben',
+              title: theme.title,
+              subtitle: 'Schreiben Thema'
+            }}
+            variant="inline"
+          />
           <button
             onClick={() => setShowTips(true)}
             className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500/15 text-amber-900 border border-amber-500/30 hover:bg-amber-500/25 transition-all active:scale-95 cursor-pointer font-bold text-xs shadow-xs"

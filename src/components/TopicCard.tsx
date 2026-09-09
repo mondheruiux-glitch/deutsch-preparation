@@ -1,6 +1,7 @@
 import React from 'react';
 import { Topic } from '../types';
 import { ChevronRight, Crown } from 'lucide-react';
+import { FavoriteButton } from './FavoriteButton';
 
 export interface TopicCardProps {
   topic: Topic;
@@ -13,8 +14,16 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, onClick }) =
   const badgeLabel = isTopic0 ? '0' : String(index);
 
   return (
-    <button
+    <div
+      role="button"
+      tabIndex={0}
       onClick={() => onClick(topic)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick(topic);
+        }
+      }}
       className={`w-full bg-surface-container rounded-2xl p-3 sm:p-4 shadow-md3-sm text-left active:scale-[0.98] hover:shadow-md transition-all flex items-center gap-4 cursor-pointer border ${
         isTopic0 
           ? 'border-primary/40 bg-gradient-to-r from-primary/5 via-surface-container to-surface-container hover:border-primary ring-1 ring-primary/20' 
@@ -28,6 +37,17 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, onClick }) =
           alt={topic.title}
           className="w-full h-full object-cover"
         />
+        {/* Favorite button overlay */}
+        <div className="absolute top-1 left-1 z-10">
+          <FavoriteButton
+            item={{
+              id: topic.id,
+              section: 'sprechen',
+              title: topic.title,
+              subtitle: isTopic0 ? '19 Wortschatz-Themen' : 'Sprechen Thema'
+            }}
+          />
+        </div>
         <div className={`absolute top-1 right-1 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shadow-sm ${
           isTopic0 
             ? 'bg-primary text-white' 
@@ -63,6 +83,6 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, onClick }) =
       }`}>
         <ChevronRight size={20} />
       </div>
-    </button>
+    </div>
   );
 };

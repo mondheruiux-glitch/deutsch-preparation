@@ -3,6 +3,7 @@ import { BildWortschatzTopic } from '../types';
 import { bildWortschatzTopics } from '../data/bildWortschatz';
 import { ArrowLeft, ChevronDown, Brain, BookOpen, X, Volume2, PlayCircle, MessageCircle } from 'lucide-react';
 import { playGermanAudio, stopGermanAudio } from '../utils/audio';
+import { FavoriteButton } from './FavoriteButton';
 
 interface BildWortschatzViewProps {
   selectedTopic: BildWortschatzTopic | null;
@@ -39,6 +40,16 @@ export function BildWortschatzView({ selectedTopic, onSelectTopic, onClose }: Bi
       });
     }
   };
+
+  // Scroll to selectedTopic if passed in
+  useEffect(() => {
+    if (selectedTopic) {
+      const idx = bildWortschatzTopics.findIndex(t => t.id === selectedTopic.id);
+      if (idx !== -1) {
+        scrollToSlide(idx);
+      }
+    }
+  }, [selectedTopic]);
 
   const handleScroll = () => {
     if (containerRef.current) {
@@ -208,6 +219,22 @@ export function BildWortschatzView({ selectedTopic, onSelectTopic, onClose }: Bi
             
             {/* Action Buttons Side (TikTok style) */}
             <div className="absolute bottom-5 sm:bottom-8 right-4 sm:right-8 z-30 flex flex-col gap-4 items-center">
+              {/* Favorite Button */}
+              <div className="flex flex-col items-center gap-1 group">
+                <FavoriteButton
+                  item={{
+                    id: String(topic.id),
+                    section: 'bilder',
+                    title: topic.title,
+                    icon: topic.icon,
+                    subtitle: topic.englishTitle
+                  }}
+                  iconSize={26}
+                  className="!w-14 !h-14 sm:!w-16 sm:!h-16 !bg-white/25 hover:!bg-white/40 backdrop-blur-md !text-white border border-white/30 shadow-xl"
+                />
+                <span className="text-white text-xs font-bold font-nunito drop-shadow-md tracking-wider uppercase">Favorit</span>
+              </div>
+
               <button 
                 onClick={() => setShowDetails(topic)} 
                 className="flex flex-col items-center gap-1 group cursor-pointer"
@@ -257,12 +284,24 @@ export function BildWortschatzView({ selectedTopic, onSelectTopic, onClose }: Bi
             </div>
             
             <div className="flex-1 overflow-y-auto p-4 pb-safe pb-48">
-              <div className="flex items-center gap-3 mb-6 pr-8">
-                <span className="text-4xl bg-surface-container p-3 rounded-2xl shadow-sm shrink-0">{showDetails.icon}</span>
-                <div>
-                  <h2 className="font-fredoka text-2xl font-medium text-on-surface leading-tight">{showDetails.title}</h2>
-                  <p className="text-on-surface-variant">{showDetails.englishTitle}</p>
+              <div className="flex items-center justify-between gap-3 mb-6 pr-8">
+                <div className="flex items-center gap-3">
+                  <span className="text-4xl bg-surface-container p-3 rounded-2xl shadow-sm shrink-0">{showDetails.icon}</span>
+                  <div>
+                    <h2 className="font-fredoka text-2xl font-medium text-on-surface leading-tight">{showDetails.title}</h2>
+                    <p className="text-on-surface-variant">{showDetails.englishTitle}</p>
+                  </div>
                 </div>
+                <FavoriteButton
+                  item={{
+                    id: String(showDetails.id),
+                    section: 'bilder',
+                    title: showDetails.title,
+                    icon: showDetails.icon,
+                    subtitle: showDetails.englishTitle
+                  }}
+                  variant="inline"
+                />
               </div>
 
               {/* Vocabulary List */}

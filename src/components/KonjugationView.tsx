@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { konjugationLessons } from '../data/konjugation';
 import { ArrowLeft, CheckCircle2, ChevronRight } from 'lucide-react';
+import { FavoriteButton } from './FavoriteButton';
 
-export function KonjugationView() {
-  const [selectedLessonId, setSelectedLessonId] = useState<string | null>(null);
+interface KonjugationViewProps {
+  initialLessonId?: string | null;
+}
+
+export function KonjugationView({ initialLessonId }: KonjugationViewProps) {
+  const [selectedLessonId, setSelectedLessonId] = useState<string | null>(initialLessonId || null);
+
+  useEffect(() => {
+    if (initialLessonId) {
+      setSelectedLessonId(initialLessonId);
+    }
+  }, [initialLessonId]);
 
   const selectedLesson = konjugationLessons.find(l => l.id === selectedLessonId);
 
@@ -19,9 +30,21 @@ export function KonjugationView() {
             <ArrowLeft size={18} />
             <span>Zurück zur Übersicht</span>
           </button>
-          <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary-container text-primary">
-            Lektion {selectedLesson.number}
-          </span>
+          <div className="flex items-center gap-2">
+            <FavoriteButton
+              item={{
+                id: selectedLesson.id,
+                section: 'konjugation',
+                title: selectedLesson.title,
+                icon: selectedLesson.icon,
+                subtitle: `Lektion ${selectedLesson.number}`
+              }}
+              variant="inline"
+            />
+            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary-container text-primary">
+              Lektion {selectedLesson.number}
+            </span>
+          </div>
         </div>
         
         {/* Content */}
@@ -70,9 +93,17 @@ export function KonjugationView() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {konjugationLessons.map((lesson) => (
-          <button
+          <div
             key={lesson.id}
+            role="button"
+            tabIndex={0}
             onClick={() => setSelectedLessonId(lesson.id)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setSelectedLessonId(lesson.id);
+              }
+            }}
             className="w-full bg-surface-container hover:bg-surface-container-high/60 hover:shadow-md border border-transparent hover:border-primary/20 transition-all rounded-3xl p-4 sm:p-5 flex items-center gap-4 text-left shadow-md3-sm cursor-pointer active:scale-[0.98]"
           >
             <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0 shadow-sm ${lesson.color}`}>
@@ -84,10 +115,21 @@ export function KonjugationView() {
                 {lesson.title}
               </h3>
             </div>
-            <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-on-surface-variant shrink-0">
-              <ChevronRight size={20} />
+            <div className="flex items-center gap-2 shrink-0">
+              <FavoriteButton
+                item={{
+                  id: lesson.id,
+                  section: 'konjugation',
+                  title: lesson.title,
+                  icon: lesson.icon,
+                  subtitle: `Lektion ${lesson.number}`
+                }}
+              />
+              <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-on-surface-variant shrink-0">
+                <ChevronRight size={20} />
+              </div>
             </div>
-          </button>
+          </div>
         ))}
       </div>
     </div>

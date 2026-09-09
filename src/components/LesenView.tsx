@@ -3,6 +3,7 @@ import { LesenTest, OesdTask } from '../types';
 import { lesenTests } from '../data/lesen';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ChevronLeft, ChevronRight, CheckCircle2, XCircle } from 'lucide-react';
+import { FavoriteButton } from './FavoriteButton';
 
 const AdBox = ({ children, badgeText }: { children: React.ReactNode, badgeText?: string }) => (
   <div className="relative bg-white border border-gray-200 rounded shadow-md p-5 ml-4 mt-2 mb-2">
@@ -52,7 +53,11 @@ const XBox = ({ label, selected, onClick, correctState }: { label: string, selec
 // Helper: build a namespaced answer key to avoid ID collisions across tasks
 const answerKey = (taskId: string, itemId: string) => `${taskId}::${itemId}`;
 
-export const LesenView: React.FC = () => {
+interface LesenViewProps {
+  initialTestId?: string | null;
+}
+
+export const LesenView: React.FC<LesenViewProps> = ({ initialTestId }) => {
   const [viewState, setViewState] = useState<'list' | 'test' | 'review'>('list');
   const [activeTest, setActiveTest] = useState<LesenTest | null>(null);
   
@@ -62,6 +67,16 @@ export const LesenView: React.FC = () => {
   
   const [timeLeft, setTimeLeft] = useState(0);
   const timerRunning = useRef(false);
+
+  useEffect(() => {
+    if (initialTestId) {
+      const found = lesenTests.find(t => t.id === initialTestId);
+      if (found) {
+        setActiveTest(found);
+        setViewState('test');
+      }
+    }
+  }, [initialTestId]);
 
   useEffect(() => {
     if (viewState === 'test' && activeTest) {
@@ -179,13 +194,22 @@ export const LesenView: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {lesenTests.map(test => (
-          <motion.button
+          <motion.div
             key={test.id}
+            role="button"
+            tabIndex={0}
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}
             onClick={() => {
               setActiveTest(test);
               setViewState('test');
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setActiveTest(test);
+                setViewState('test');
+              }
             }}
             className="w-full text-left bg-white p-5 sm:p-6 rounded-3xl shadow-sm hover:shadow-md border border-gray-200 transition-all flex items-center justify-between cursor-pointer"
           >
@@ -196,10 +220,20 @@ export const LesenView: React.FC = () => {
               <h3 className="font-fredoka text-lg sm:text-xl font-bold text-[#1a3b70]">{test.title}</h3>
               <p className="text-gray-500 text-xs sm:text-sm mt-1">{test.tasks.length} Aufgaben • {test.timeLimitInMinutes} Minuten</p>
             </div>
-            <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1a3b70] shrink-0">
-              <ChevronRight size={22} />
+            <div className="flex items-center gap-2 shrink-0">
+              <FavoriteButton
+                item={{
+                  id: test.id,
+                  section: 'lesen',
+                  title: test.title,
+                  subtitle: `${test.tasks.length} Aufgaben • ${test.timeLimitInMinutes} Min`
+                }}
+              />
+              <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1a3b70] shrink-0">
+                <ChevronRight size={22} />
+              </div>
             </div>
-          </motion.button>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -233,6 +267,14 @@ export const LesenView: React.FC = () => {
             <div className="flex items-center gap-2">
               <span className="font-bold text-gray-800 text-sm sm:text-base">{activeTest.title}</span>
               <span className="text-xs text-gray-500 hidden md:inline">({currentTaskIndex + 1}/{activeTest.tasks.length})</span>
+              <FavoriteButton
+                item={{
+                  id: activeTest.id,
+                  section: 'lesen',
+                  title: activeTest.title,
+                  subtitle: `${activeTest.tasks.length} Aufgaben • ${activeTest.timeLimitInMinutes} Min`
+                }}
+              />
             </div>
             <div className={`px-3 py-1 rounded-lg font-mono text-sm sm:text-base font-bold shadow-sm flex items-center gap-1.5 ${timeLeft <= 60 ? 'bg-red-600 animate-pulse' : 'bg-black'} text-white`}>
               <span className={`w-2 h-2 rounded-full ${timeLeft <= 60 ? 'bg-white' : 'bg-green-400 animate-pulse'}`}></span>

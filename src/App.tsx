@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate, Link } from 'react-router-dom';
-import { MessageSquare, PenTool, BookOpen, Image as ImageIcon, Sparkles, LogIn, User as UserIcon } from 'lucide-react';
+import { MessageSquare, PenTool, BookOpen, Image as ImageIcon, Sparkles, LogIn, Heart } from 'lucide-react';
 import { SprechenView } from './components/SprechenView';
 import { SchreibenView } from './components/SchreibenView';
 import { LesenView } from './components/LesenView';
@@ -15,22 +15,59 @@ import { ForgotPasswordPage } from './pages/ForgotPasswordPage';
 import { ResetPasswordPage } from './pages/ResetPasswordPage';
 import { AuthCallbackPage } from './pages/AuthCallbackPage';
 import { UserProfileModal } from './components/auth/UserProfileModal';
+import { FavoritesProvider, useFavorites, FavoriteSection } from './contexts/FavoritesContext';
+import { FavoritesModal } from './components/FavoritesModal';
+
+import { sprechenTopics } from './data/sprechen';
+import { schreibenThemes } from './data/schreiben';
+import { bildWortschatzTopics } from './data/bildWortschatz';
 
 type Tab = 'sprechen' | 'schreiben' | 'lesen' | 'bilder' | 'konjugation';
 
 function LearningDashboard() {
   const { user } = useAuth();
+  const { favorites } = useFavorites();
   const [activeTab, setActiveTab] = useState<Tab>('sprechen');
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [selectedTheme, setSelectedTheme] = useState<SchreibenTheme | null>(null);
   const [selectedBildTopic, setSelectedBildTopic] = useState<BildWortschatzTopic | null>(null);
+  const [selectedLesenTestId, setSelectedLesenTestId] = useState<string | null>(null);
+  const [selectedLessonId, setSelectedLessonId] = useState<string | null>(null);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isFavoritesOpen, setIsFavoritesOpen] = useState(false);
 
   const handleTabChange = (tab: Tab) => {
     setActiveTab(tab);
     setSelectedTopic(null);
     setSelectedTheme(null);
     setSelectedBildTopic(null);
+    setSelectedLesenTestId(null);
+    setSelectedLessonId(null);
+  };
+
+  // Navigate to the correct section and open item when user taps a favorite
+  const handleNavigateToFavorite = (section: FavoriteSection, itemId: string) => {
+    setActiveTab(section as Tab);
+    setSelectedTopic(null);
+    setSelectedTheme(null);
+    setSelectedBildTopic(null);
+    setSelectedLesenTestId(null);
+    setSelectedLessonId(null);
+
+    if (section === 'sprechen') {
+      const found = sprechenTopics.find(t => t.id === itemId);
+      if (found) setSelectedTopic(found);
+    } else if (section === 'schreiben') {
+      const found = schreibenThemes.find(t => t.id === itemId);
+      if (found) setSelectedTheme(found);
+    } else if (section === 'bilder') {
+      const found = bildWortschatzTopics.find(t => String(t.id) === itemId);
+      if (found) setSelectedBildTopic(found);
+    } else if (section === 'lesen') {
+      setSelectedLesenTestId(itemId);
+    } else if (section === 'konjugation') {
+      setSelectedLessonId(itemId);
+    }
   };
 
   const navItems: { id: Tab; label: string; icon: React.ReactNode }[] = [
@@ -97,8 +134,22 @@ function LearningDashboard() {
             })}
           </nav>
 
-          {/* Right Header Area: Profile or Login */}
+          {/* Right Header Area: Favorites + Profile or Login */}
           <div className="flex items-center gap-2">
+            {/* Favorites Heart Button */}
+            <button
+              onClick={() => setIsFavoritesOpen(true)}
+              title="Meine Favoriten"
+              className="relative w-9 h-9 rounded-xl bg-surface-container-high/80 hover:bg-red-50 text-on-surface-variant hover:text-red-500 flex items-center justify-center transition-all cursor-pointer border border-slate-200/80 active:scale-95"
+            >
+              <Heart size={18} fill={favorites.length > 0 ? 'currentColor' : 'none'} className={favorites.length > 0 ? 'text-red-500' : ''} />
+              {favorites.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  {favorites.length > 9 ? '9+' : favorites.length}
+                </span>
+              )}
+            </button>
+
             {user ? (
               <button
                 onClick={() => setIsProfileOpen(true)}
@@ -144,7 +195,7 @@ function LearningDashboard() {
         )}
 
         {activeTab === 'lesen' && (
-          <LesenView />
+          <LesenView initialTestId={selectedLesenTestId} />
         )}
 
         {activeTab === 'bilder' && (
@@ -155,7 +206,7 @@ function LearningDashboard() {
         )}
 
         {activeTab === 'konjugation' && (
-          <KonjugationView />
+          <KonjugationView initialLessonId={selectedLessonId} />
         )}
       </main>
 
@@ -187,6 +238,13 @@ function LearningDashboard() {
         isOpen={isProfileOpen}
         onClose={() => setIsProfileOpen(false)}
       />
+
+      {/* Favorites Modal */}
+      <FavoritesModal
+        isOpen={isFavoritesOpen}
+        onClose={() => setIsFavoritesOpen(false)}
+        onNavigate={handleNavigateToFavorite}
+      />
     </div>
   );
 }
@@ -201,15 +259,17 @@ export default function App() {
   }, [navigate]);
 
   return (
-    <Routes>
-      <Route path="/" element={<LearningDashboard />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<SignupPage />} />
-      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-      <Route path="/reset-password" element={<ResetPasswordPage />} />
-      <Route path="/auth/callback" element={<AuthCallbackPage />} />
-      {/* Fallback to home */}
-      <Route path="*" element={<LearningDashboard />} />
-    </Routes>
+    <FavoritesProvider>
+      <Routes>
+        <Route path="/" element={<LearningDashboard />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/auth/callback" element={<AuthCallbackPage />} />
+        {/* Fallback to home */}
+        <Route path="*" element={<LearningDashboard />} />
+      </Routes>
+    </FavoritesProvider>
   );
 }

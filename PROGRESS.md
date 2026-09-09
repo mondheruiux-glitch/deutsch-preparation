@@ -146,6 +146,20 @@ All model answers are tailored strictly for **ÖSD / Goethe A1**:
 
 ---
 
+## ❤️ Favorites System (Universal Across All Modules)
+
+A persistent favorites feature (`localStorage`-backed) accessible from the top navigation bar:
+- **Header Heart Icon**: Displays active saved item counter badge (with popover modal).
+- **Favorites Modal**: Displays saved items organized into 5 collapsible/categorized sections:
+  - 🗣️ **Sprechen**: Topic cards & detail views
+  - ✍️ **Schreiben**: Letter/email themes & detail views
+  - 📖 **Lesen**: Official reading comprehension test cards & test views
+  - 🖼️ **Wortschatz (Bilder)**: TikTok-style reels & vocabulary detail sheets
+  - ⚡ **Verben (Konjugation)**: Grammar lessons & lesson study views
+- **Direct Navigation**: Clicking any favorite in the modal jumps straight into that specific lesson, test, or theme.
+
+---
+
 ## 📈 Milestones & Roadmap
 
 ```mermaid
@@ -157,6 +171,7 @@ gantt
     Sprechen Topics 0-22            :done, des2, 2026-09-03, 2026-09-06
     Schreiben A1 Model Answers      :done, des3, 2026-09-05, 2026-09-07
     Restaurant Topic 23 Addition    :done, des4, 2026-09-08, 2026-09-08
+    Favorites System (All Modules)  :done, des5, 2026-09-09, 2026-09-09
     section Authentication & Cloud
     Supabase Integration           :done, auth1, 2026-09-07, 2026-09-08
     Secret Key Hardening            :done, auth2, 2026-09-08, 2026-09-08

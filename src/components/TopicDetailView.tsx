@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, CheckCircle2, MessageCircle, Eye, Volume2 } from 'lucide-react';
 import { VoiceTextInput } from './VoiceTextInput';
 import { playGermanAudio } from '../utils/audio';
+import { FavoriteButton } from './FavoriteButton';
 
 interface TopicDetailViewProps {
   topic: Topic;
@@ -40,9 +41,20 @@ export function TopicDetailView({ topic, onBack }: TopicDetailViewProps) {
           <ArrowLeft size={18} />
           <span>Zurück zur Übersicht</span>
         </button>
-        <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary-container text-primary">
-          A1 Sprechen
-        </span>
+        <div className="flex items-center gap-2">
+          <FavoriteButton
+            item={{
+              id: topic.id,
+              section: 'sprechen',
+              title: topic.title,
+              subtitle: 'Sprechen Thema'
+            }}
+            variant="inline"
+          />
+          <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary-container text-primary">
+            A1 Sprechen
+          </span>
+        </div>
       </div>
 
       {/* Hero Image */}

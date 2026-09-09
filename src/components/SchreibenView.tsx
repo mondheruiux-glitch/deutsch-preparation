@@ -5,6 +5,7 @@ import { SchreibenThemeDetail } from './SchreibenThemeDetail';
 import { SchreibenTipsModal } from './SchreibenTipsModal';
 import * as Icons from 'lucide-react';
 import { BookOpen, Info, CheckCircle2 } from 'lucide-react';
+import { FavoriteButton } from './FavoriteButton';
 
 interface SchreibenViewProps {
   selectedTheme: SchreibenTheme | null;
@@ -61,9 +62,17 @@ export function SchreibenView({ selectedTheme, onSelectTheme }: SchreibenViewPro
         {schreibenThemes.map((theme, index) => {
           const IconComponent = (Icons as any)[theme.icon] || Icons.FileText;
           return (
-            <button
+            <div
               key={theme.id}
+              role="button"
+              tabIndex={0}
               onClick={() => onSelectTheme(theme)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  onSelectTheme(theme);
+                }
+              }}
               className="w-full bg-surface-container hover:bg-surface-container-high/60 hover:shadow-md border border-transparent hover:border-primary/20 transition-all rounded-3xl p-4 sm:p-5 flex items-center gap-4 text-left shadow-md3-sm cursor-pointer active:scale-[0.98]"
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-surface rounded-2xl flex items-center justify-center shrink-0 shadow-sm text-primary">
@@ -77,10 +86,20 @@ export function SchreibenView({ selectedTheme, onSelectTheme }: SchreibenViewPro
                   {theme.title}
                 </h3>
               </div>
-              <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-on-surface-variant shrink-0">
-                <Icons.ChevronRight size={20} />
+              <div className="flex items-center gap-2 shrink-0">
+                <FavoriteButton
+                  item={{
+                    id: theme.id,
+                    section: 'schreiben',
+                    title: theme.title,
+                    subtitle: `Thema ${index + 1}`
+                  }}
+                />
+                <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-on-surface-variant shrink-0">
+                  <Icons.ChevronRight size={20} />
+                </div>
               </div>
-            </button>
+            </div>
           );
         })}
       </div>
