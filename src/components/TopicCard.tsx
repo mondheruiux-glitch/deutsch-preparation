@@ -31,7 +31,7 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, onClick }) =
       }`}
     >
       {/* Image thumbnail */}
-      <div className="relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-xl overflow-hidden bg-surface-container-high shadow-sm">
+      <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 shrink-0 rounded-2xl overflow-hidden bg-surface-container-high shadow-sm border border-surface-container-high/40">
         <img 
           src={topic.image} 
           alt={topic.title}

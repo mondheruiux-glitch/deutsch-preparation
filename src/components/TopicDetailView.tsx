@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Topic } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, CheckCircle2, MessageCircle, Eye, Volume2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, MessageCircle, Eye, Volume2, Maximize2, X } from 'lucide-react';
 import { VoiceTextInput } from './VoiceTextInput';
 import { playGermanAudio } from '../utils/audio';
 import { FavoriteButton } from './FavoriteButton';
@@ -13,6 +13,7 @@ interface TopicDetailViewProps {
 
 export function TopicDetailView({ topic, onBack }: TopicDetailViewProps) {
   const [showAnswers, setShowAnswers] = useState(false);
+  const [showFullscreen, setShowFullscreen] = useState(false);
   
   const [bildbeschreibungInput, setBildbeschreibungInput] = useState('');
   const [situationInputs, setSituationInputs] = useState<Record<number, string>>({});
@@ -57,24 +58,80 @@ export function TopicDetailView({ topic, onBack }: TopicDetailViewProps) {
         </div>
       </div>
 
-      {/* Hero Image */}
-      <div className="relative w-full h-56 sm:h-72 md:h-96 rounded-2xl sm:rounded-3xl overflow-hidden bg-surface-container-high shadow-md mb-6">
+      {/* Topic Title & Header */}
+      <div className="mb-4">
+        <h1 className="font-fredoka text-2xl sm:text-3xl md:text-4xl font-medium text-on-surface mb-1">
+          {topic.title}
+        </h1>
+        <p className="text-on-surface-variant text-sm sm:text-base flex items-center gap-2 font-medium">
+          🎙️ Sprechen & ✍️ Schreiben — Bildbeschreibung & Situation
+        </p>
+      </div>
+
+      {/* Full Picture Container - Expanded Height & 100% Photo Visibility */}
+      <div className="relative w-full h-[380px] sm:h-[500px] md:h-[620px] lg:h-[680px] rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-950 dark:bg-black shadow-lg mb-6 border border-surface-container-high flex items-center justify-center group select-none">
+        {/* Ambient Blur Background for rich immersive feel */}
+        <img 
+          src={topic.image} 
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-30 scale-110 pointer-events-none"
+        />
+
+        {/* Crisp, Completely Uncropped Photo */}
         <img 
           src={topic.image} 
           alt={topic.title}
-          className="w-full h-full object-cover"
+          className="relative z-10 w-full h-full max-w-full max-h-full object-contain cursor-zoom-in select-none drop-shadow-2xl transition-transform duration-300 group-hover:scale-[1.01]"
+          onClick={() => setShowFullscreen(true)}
+          title="Klicken für Vollbild"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
-          <div>
-            <h1 className="font-fredoka text-2xl sm:text-3xl md:text-4xl font-medium text-white mb-1 drop-shadow-sm">
-              {topic.title}
-            </h1>
-            <p className="text-white/90 text-sm sm:text-base flex items-center gap-2 drop-shadow-sm">
-              🎙️ Sprechen oder ✍️ Schreiben — Bildbeschreibung & Alltagssituation
-            </p>
-          </div>
-        </div>
+
+        {/* Floating Zoom / Fullscreen Button */}
+        <button
+          onClick={() => setShowFullscreen(true)}
+          className="absolute top-3 right-3 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 hover:bg-black/80 text-white backdrop-blur-md text-xs font-medium border border-white/20 shadow-md transition-all active:scale-95 cursor-pointer"
+          title="Vollbild anzeigen"
+        >
+          <Maximize2 size={15} />
+          <span>Vollbild</span>
+        </button>
       </div>
+
+      {/* Fullscreen Modal */}
+      <AnimatePresence>
+        {showFullscreen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col p-4 sm:p-6"
+            onClick={() => setShowFullscreen(false)}
+          >
+            <div className="flex items-center justify-between pb-3 text-white border-b border-white/10 shrink-0">
+              <div>
+                <h3 className="font-fredoka text-lg sm:text-xl">{topic.title}</h3>
+                <p className="text-xs text-white/70">Klicke irgendwo zum Schließen</p>
+              </div>
+              <button
+                onClick={() => setShowFullscreen(false)}
+                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
+                title="Schließen"
+              >
+                <X size={22} />
+              </button>
+            </div>
+            <div className="flex-1 flex items-center justify-center overflow-hidden p-2 sm:p-4">
+              <img
+                src={topic.image}
+                alt={topic.title}
+                className="max-w-full max-h-full object-contain drop-shadow-2xl select-none"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="bg-surface rounded-2xl sm:rounded-3xl">
         <div className="space-y-8">
