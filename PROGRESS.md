@@ -143,6 +143,7 @@ All model answers are tailored strictly for **ÖSD / Goethe A1**:
 | `Forbidden use of secret API key in browser` | `sb_secret_...` was pasted into `.env` instead of `anon` key | Switched to valid Supabase JWT `anon` key; added safety guards in `src/lib/supabase.ts` |
 | Google OAuth `redirect_uri_mismatch` (Error 400) | OAuth client configured as "Desktop app" with `http://localhost` | Created Web Application client with `https://fhgqinnfoothziltwivl.supabase.co/auth/v1/callback` |
 | Safe Key Fallback & Developer DX | Fatal crash if secret key is present in client bundle | Added `isSecretKeyConfigured` detection and helpful warning banner in `LoginPage` and `SignupPage` |
+| Auth & 404 on Wasmer (`wasmer.app`) | `.env` not in git -> bundle had `dummy-anon-key`; static server lacked SPA rewrite | Added safe `anon` key fallback in `src/lib/supabase.ts` + SPA routing fallback (`404.html` + `index.html` session state restore) |
 
 ---
 
