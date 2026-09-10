@@ -20,28 +20,46 @@ export const AuthCallbackPage: React.FC = () => {
         const type = params.get('type');
 
         if (accessToken && refreshToken) {
-          await supabase.auth.setSession({
+          const { error } = await supabase.auth.setSession({
             access_token: accessToken,
             refresh_token: refreshToken,
           });
 
+          if (error) {
+            console.error('Error setting session:', error);
+            window.location.replace('/login');
+            return;
+          }
+
           if (type === 'recovery') {
-            navigate('/reset-password', { replace: true });
+            window.location.replace('/reset-password');
             return;
           }
         } else if (code) {
-          await supabase.auth.exchangeCodeForSession(code);
+          const { error } = await supabase.auth.exchangeCodeForSession(code);
+          if (error) {
+            console.error('Error exchanging code:', error);
+            window.location.replace('/login');
+            return;
+          }
           if (type === 'recovery') {
-            navigate('/reset-password', { replace: true });
+            window.location.replace('/reset-password');
+            return;
+          }
+        } else {
+          // Check if session was already detected in URL by Supabase client
+          const { data: { session } } = await supabase.auth.getSession();
+          if (!session) {
+            window.location.replace('/login');
             return;
           }
         }
 
-        // Default redirect to home
-        navigate('/', { replace: true });
+        // Clean redirect to home with fresh state and clean URL
+        window.location.replace('/');
       } catch (err) {
         console.error('Auth callback error:', err);
-        navigate('/login', { replace: true });
+        window.location.replace('/login');
       }
     };
 

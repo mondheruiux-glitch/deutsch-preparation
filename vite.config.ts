@@ -5,8 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(({ mode }) => {
   return {
-    // Use relative paths for Capacitor (Android APK) builds
-    base: mode === 'production' ? './' : '/',
+    // Use relative paths only when specifically building for Capacitor mobile APK
+    base: process.env.CAPACITOR_BUILD === 'true' ? './' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
