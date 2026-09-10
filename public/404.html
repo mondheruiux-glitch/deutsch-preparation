@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>A1 Deutsch - Weiterleitung...</title>
+    <script>
+      // Single Page App redirect for static hosts (Wasmer, GitHub Pages, etc.)
+      // Store current path, search & hash and redirect to root so React Router handles it
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      location.replace('/');
+    </script>
+  </head>
+  <body>
+    <p>Weiterleitung zur Anwendung...</p>
+  </body>
+</html>

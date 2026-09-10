@@ -3,7 +3,8 @@ import { Capacitor } from '@capacitor/core';
 import { Browser } from '@capacitor/browser';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://fhgqinnfoothziltwivl.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const defaultAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZoZ3Fpbm5mb290aHppbHR3aXZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3ODkwMTEsImV4cCI6MjEwNDM2NTAxMX0.DC2RJw4la-_2VEQB4n9Rly8e1oDLWX1dNkl_nh8P374';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || defaultAnonKey;
 
 // Detect if a secret key (service_role or sb_secret_...) was mistakenly used
 export const isSecretKeyConfigured = Boolean(
